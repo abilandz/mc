@@ -3,26 +3,70 @@
 **Last update**: 20230107
 
 ### Table of Contents
-* [EPOS_20221117 (pp at 13 TeV)](#EPOS_20221117)
+* [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#EPOS_20221228)
+* [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#EPOS_20221117)
+
+
 
 
 
 ---
 
-
-
-### EPOS_20221117 (pp at 13 TeV) <a name="EPOS_20221117"></a>
+### EPOS_20221228 <a name="EPOS_20221228"></a>
 
 Executive summary:
+- pp at 13 TeV
+- EPOS 3.117
+- hydro (NO cascade)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C1) ('bim' variable = impact parameter)
+- total statistics: ~75 M events (~1 M events per final merged ROOT file)
+- the output files for this production are in: /scratch7/abilandz/sim/EPOS_20221228 
+- the common name of ROOT file: merged_merged_z-EPOS_20221117.root
+- the EPOS config file is here: /scratch7/abilandz/EPOS/EPOS-00/epos3117/Unu/EPOS_20221228.optns
 
 
+
+EPOS config file:
+
+```bash
+application hadron
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 13000
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+!core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C1)
+
+echo off
+```
+
+
+
+
+
+### EPOS_20221117 <a name="EPOS_20221117"></a>
+
+Remarks: This was the first EPOS 4 production, used for benchmarking of large-scale production EPOS_20220510 (obtained with EPOS 3.117).
+
+Executive summary:
 - pp at 13 TeV
 - EPOS 4
 - hydro (NO cascade)
-- high multiplicity sample, impact parameter is set to 0: ```set bminim 0 set bmaxim 0```
+- high multiplicity sample, impact parameter is set to 0: set bminim 0 set bmaxim 0
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
-- total statistics: ~ 1 M events (100 x 10 per job, 100K events per ROOT file)
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~ 1 M events (100 x 10 per job, 100K events per final merged ROOT file)
 - the output files for this production are in: /scratch7/abilandz/sim/EPOS_20221117
 - the common name of ROOT file: merged_z-EPOS_20221117.root
 - the EPOS config file is here: /lustre/cbm/users/abilandz/EPOS/EPOS-01/epos4.0.0/examples/EPOS_20221117.optns

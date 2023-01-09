@@ -62,26 +62,16 @@ Remarks: This was the first EPOS 4 production, used for benchmarking of large-sc
 
 Executive summary:
 - pp at 13 TeV
-
 - EPOS 4
-
 - hydro (NO cascade)
-
 - high multiplicity sample, impact parameter is set to 0: set bminim 0 set bmaxim 0
-
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
-
 - ALICE acceptance is NOT hardwired
-
 - fillTree(C2) ('bim' variable = number of pomerons)
-
 - total statistics: ~ 11.5 M events (100 x 10 per job, 100 K events per final merged ROOT file)
-
 - output files for this production are in: /scratch7/abilandz/sim/EPOS_20221117
-
 - common name of ROOT file: merged_z-EPOS_20221117.root
 
-  
 
 EPOS 4 config file:
 

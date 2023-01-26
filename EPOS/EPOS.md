@@ -4,10 +4,10 @@
 
 
 ### Table of Contents
-* [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#EPOS_20221228)
-* [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#EPOS_20221117)
-* [EPOS_20220901 (XeXe at 5.44 TeV, min bias, EPOS 3.117)](#EPOS_20220901)
-* [EPOS_20220510 (pp at 13 TeV, high mult, EPOS 3.117)](#EPOS_20220510)
+* [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#EPOS-20221228)
+* [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#EPOS-20221117)
+* [EPOS_20220901 (XeXe at 5.44 TeV, min bias, EPOS 3.117)](#EPOS-20220901)
+* [EPOS_20220510 (pp at 13 TeV, high mult, EPOS 3.117)](#EPOS-20220510)
 
 
 
@@ -15,7 +15,7 @@
 
 
 
-### EPOS_20221228 <a name="EPOS_20221228"></a>
+### EPOS_20221228 <a name="EPOS-20221228"></a>
 
 Executive summary:
 - pp at 13 TeV
@@ -58,7 +58,7 @@ echo off
 
 
 
-### EPOS_20221117 <a name="EPOS_20221117"></a>
+### EPOS_20221117 <a name="EPOS-20221117"></a>
 
 Remarks: This was the first EPOS 4 production, used for benchmarking of large-scale production EPOS_20220510 (obtained with EPOS 3.117).
 
@@ -123,7 +123,7 @@ fillTree4(C2) !root output
 
 
 
-### EPOS_20220901 <a name="EPOS_20220901"></a>
+### EPOS_20220901 <a name="EPOS-20220901"></a>
 
 Executive summary:
 - XeXe at 5.44 TeV
@@ -165,7 +165,7 @@ echo off
 
 
 
-### EPOS_20220510 <a name="EPOS_20220510"></a>
+### EPOS_20220510 <a name="EPOS-20220510"></a>
 Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. 
 
 Executive summary:

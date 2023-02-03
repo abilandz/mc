@@ -11,7 +11,7 @@
 * [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#EPOS-20221117)
 * [EPOS_20220901 (XeXe at 5.44 TeV, min bias, EPOS 3.117)](#EPOS-20220901)
 * [EPOS_20220510 (pp at 13 TeV, high mult, EPOS 3.117)](#EPOS-20220510)
-
+* [Catching user input: **read**](#read)
 
 
 ### EPOS_20230201 <a name="EPOS-20230201"></a>
@@ -25,20 +25,17 @@ Executive summary:
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- total statistics: <span style="color:red">6.2 M</span> events (100K events per ROOT file after final merging)
+- total statistics: 6.2 M events (100K events per ROOT file after final merging)
 the output files for this production are in: 
-  - /scratch7/abilandz/sim/EPOS_20230201-1 => <span style="color:red">6.2 M</span> (GSI, cluster "Virgo", partition "main")
-  - /scratch5/abilandz/sim/EPOS_20230201-2 => <span style="color:red">TBI</span> (local batch farm, partition "kta")
-  -  /scratch8/abilandz/sim/EPOS_20230201-3 => <span style="color:red">TBI</span> (LRZ, cluster "serial", partition "serial_std")
-  -  /scratch8/abilandz/sim/EPOS_20230201-4 => <span style="color:red">TBI</span> (LRZ, cluster "cm2_tiny", partition "cm2_tiny")
-  -  /scratch8/abilandz/sim/EPOS_20230201-5 => <span style="color:red">TBI</span> (LRZ, cluster "cm2", partition "cm2_std")
-  -  /scratch8/abilandz/sim/EPOS_20230201-6 => <span style="color:red">TBI</span> (LRZ, cluster "mpp3", partition "mpp3_batch")
+  - /scratch7/abilandz/sim/EPOS_20230201-1 => 6.2 M (GSI, cluster "Virgo", partition "main")
+  - /scratch5/abilandz/sim/EPOS_20230201-2 => TBI (local batch farm, cluster "ktacluster", partition "kta")
+  -  /scratch8/abilandz/sim/EPOS_20230201-3 => TBI (LRZ, cluster "serial", partition "serial_std")
+  -  /scratch8/abilandz/sim/EPOS_20230201-4 => TBI (LRZ, cluster "cm2_tiny", partition "cm2_tiny")
+  -  /scratch8/abilandz/sim/EPOS_20230201-5 => TBI (LRZ, cluster "cm2", partition "cm2_std")
+  -  /scratch8/abilandz/sim/EPOS_20230201-6 => TBI (LRZ, cluster "mpp3", partition "mpp3_batch")
 - the common name of ROOT file: merged_z-EPOS_20230201.root
 
 EPOS 4 config file:
-
-Remarks: 
-
 * Virgo: nfull 100, nfreeze 10
 * local batch farm:  nfull 10, nfreeze 10
 
@@ -82,6 +79,9 @@ fillTree4(C1) !root output
 ```
 
 ---
+
+
+### test <a name="read"></a>
 
 
 

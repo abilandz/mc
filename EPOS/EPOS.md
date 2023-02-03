@@ -10,7 +10,7 @@
 * [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#EPOS-20221228)
 * [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#EPOS-20221117)
 * [EPOS_20220901 (XeXe at 5.44 TeV, min bias, EPOS 3.117)](#EPOS-20220901)
-* [EPOS_20220510 (pp at 13 TeV, high mult, EPOS 3.117)](#EPOS-20220510)
+* [EPOS_20220510 (pp at 13 TeV, high mult, EPOS 3.117)](#20220510)
 * [Catching_user (input , 1, 2 ) : **read**](#read)
 
 
@@ -235,7 +235,7 @@ echo off
 
 
 
-### EPOS_20220510 <a name="EPOS-20220510"></a>
+### EPOS_20220510 <a name="20220510"></a>
 Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. 
 
 Executive summary:

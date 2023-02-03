@@ -2,8 +2,6 @@
 
 **Last update**: 20230203
 
-[GitBook](https://abilandz.gitbook.io/monte-carlo-productions/epos/epos) 
-
 ### Table of Contents
 
 * [EPOS_20230201 (pp at 13 TeV, min bias, EPOS 4)](#20230201)

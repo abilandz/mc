@@ -29,7 +29,7 @@ the output files for this production are in:
   -  /scratch8/abilandz/sim/EPOS_20230201-4 => TBI (LRZ, cluster "cm2_tiny", partition "cm2_tiny")
   -  /scratch8/abilandz/sim/EPOS_20230201-5 => TBI (LRZ, cluster "cm2", partition "cm2_std")
   -  /scratch8/abilandz/sim/EPOS_20230201-6 => TBI (LRZ, cluster "mpp3", partition "mpp3_batch")
-  -  /scratch8/abilandz/sim/EPOS_20230201-7 => TBI (LRZ, cluster "cm2", partition "cm2_long")
+  -  /scratch8/abilandz/sim/EPOS_20230201-7 => TBI (LRZ, cluster "cm2", partition "cm2_large")
 - the common name of ROOT file: merged_z-EPOS_20230201.root
 
 EPOS 4 config file:
@@ -39,7 +39,7 @@ EPOS 4 config file:
 * LRZ, cluster "cm2_tiny", partition "cm2_tiny":  nfull 100, nfreeze 10
 * LRZ, cluster "cm2", partition "cm2_std":  nfull 100, nfreeze 10
 * LRZ, cluster "mpp3", partition "mpp3_batch":  nfull 100, nfreeze 10
-* LRZ, cluster "cm2", partition "cm2_long":  nfull 100, nfreeze 10
+* LRZ, cluster "cm2", partition "cm2_large":  nfull 100, nfreeze 10
 
 ```bash
 !-------------------------------------------------------------

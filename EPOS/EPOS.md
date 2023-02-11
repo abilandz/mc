@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20230210
+**Last update**: 20230211
 
 ### Table of Contents
 
@@ -21,14 +21,14 @@ Executive summary:
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- total statistics: 75.3 M events (100K events per ROOT file after final merging)
+- total statistics: 87.8 M events (100K events per ROOT file after final merging)
 the output files for this production are in: 
-  - /scratch7/abilandz/sim/EPOS_20230201-1 => 64.5 M (GSI, cluster "Virgo", partition "main")
-  - /scratch5/abilandz/sim/EPOS_20230201-2 => 7.8 M (local batch farm, cluster "ktacluster", partition "kta")
+  - /scratch7/abilandz/sim/EPOS_20230201-1 => 75.1 M (GSI, cluster "Virgo", partition "main")
+  - /scratch5/abilandz/sim/EPOS_20230201-2 => 9.4 M (local batch farm, cluster "ktacluster", partition "kta")
   -  /scratch8/abilandz/sim/EPOS_20230201-3 => 1.9 M (LRZ, cluster "serial", partition "serial_std")
   -  /scratch8/abilandz/sim/EPOS_20230201-4 => 0.8 M (LRZ, cluster "cm2_tiny", partition "cm2_tiny")
   -  /scratch8/abilandz/sim/EPOS_20230201-5 => 0.3 M (LRZ, cluster "cm2", partition "cm2_std")
-  -  /scratch8/abilandz/sim/EPOS_20230201-6 => TBI (LRZ, cluster "mpp3", partition "mpp3_batch")
+  -  /scratch8/abilandz/sim/EPOS_20230201-6 => 0.3 M (LRZ, cluster "mpp3", partition "mpp3_batch")
   -  /scratch8/abilandz/sim/EPOS_20230201-7 => TBI (LRZ, cluster "cm2", partition "cm2_large")
 - the common name of ROOT file: merged_z-EPOS_20230201.root
 

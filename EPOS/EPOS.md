@@ -12,6 +12,7 @@
 * [EPOS_20220121-3 (pp at 62.4 GeV, min bias, EPOS 3.117)](#20220121.3)
 * [EPOS_20220121-2 (pp at 6.7 GeV, min bias, EPOS 3.117)](#20220121.2)
 * [EPOS_20220121-1 (pp at 6.1 GeV, min bias, EPOS 3.117)](#20220121.1)
+* [EPOS_20210611-1 (pp at 13 TeV, high mult, EPOS 3.117)](#20210611.1)
 
 ### EPOS_20230201 <a name="20230201"></a>
 Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. 
@@ -305,7 +306,6 @@ set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 62.4
 set bminim 0 set bmaxim 1.4
 set istmax 25  set phimin 0  set phimax 0
 set ninicon 1 set iranphi 0 ftime on
-set seedj 841466769
 nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 
 ! uncomment one of the following lines
@@ -346,7 +346,6 @@ set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 6.7
 set bminim 0 set bmaxim 1.4
 set istmax 25  set phimin 0  set phimax 0
 set ninicon 1 set iranphi 0 ftime on
-set seedj 856844059
 nodecays 110 20 2130 2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 
 ! uncomment one of the following lines
@@ -372,7 +371,7 @@ Executive summary:
 - min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
 - nodecays 110 20 2130 2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
-- fillTree(C2) ('bim' variable = number of pomerons) TBI
+- fillTree(C2) ('bim' variable = number of pomerons)
 - total statistics: ~10 M events (100 events per final ROOT file)
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20220121-1 
 - common name of ROOT file: z-EPOS_20220121-1.root
@@ -385,8 +384,45 @@ set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 6.1
 set bminim 0 set bmaxim 1.4
 set istmax 25  set phimin 0  set phimax 0
 set ninicon 1 set iranphi 0 ftime on
-set seedj 315611038
 nodecays 110 20 2130 2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+ core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+!core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+---
+
+
+
+### EPOS_20210611-1 <a name="20210611.1"></a>
+Executive summary:
+- pp at 13 TeV
+- EPOS 3.117
+- hydro (NO cascade)
+- high multiplicity sample sample, impact parameter is set via: set bminim 0 set bmaxim 0
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~97.91 M events (100 events per final ROOT file)
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20220121-1 
+- common name of ROOT file: z-EPOS_20210611-1.root
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 13000
+set bminim 0 set bmaxim 0
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 
 ! uncomment one of the following lines
 

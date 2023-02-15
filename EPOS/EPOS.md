@@ -9,9 +9,9 @@
 * [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#20221117)
 * [EPOS_20220901 (XeXe at 5.44 TeV, min bias, EPOS 3.117)](#20220901)
 * [EPOS_20220510 (pp at 13 TeV, high mult, EPOS 3.117)](#20220510)
-* [EPOS_20220121-3] (pp at 62.4 GeV, min bias, EPOS 3.117)](#20220121.3)
-* [EPOS_20220121-2] (pp at 6.7 GeV, min bias, EPOS 3.117)](#20220121.2)
-* [EPOS_20220121-1] (pp at 6.1 GeV, min bias, EPOS 3.117)](#20220121.1)
+* [EPOS_20220121-3 (pp at 62.4 GeV, min bias, EPOS 3.117)](#20220121.3)
+* [EPOS_20220121-2 (pp at 6.7 GeV, min bias, EPOS 3.117)](#20220121.2)
+* [EPOS_20220121-1 (pp at 6.1 GeV, min bias, EPOS 3.117)](#20220121.1)
 
 ### EPOS_20230201 <a name="20230201"></a>
 Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. 

@@ -418,7 +418,7 @@ Executive summary:
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
 - total statistics: ~97.91 M events (100 events per final ROOT file)
-- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20220121-1 
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20210611-1 
 - common name of ROOT file: z-EPOS_20210611-1.root
 
 EPOS 3.117 config file:

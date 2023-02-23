@@ -19,6 +19,7 @@
 * [EPOS_20210106-1 (O-O at 7 TeV, min bias, EPOS 3.117)](#20210106.1)
 * [EPOS_20201113-1 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20201113.1)
 * [EPOS_20201030 (Au-Au at 200 GeV, min bias, EPOS 3.117)](#20201030)
+* [EPOS_20201007 (Au-Au at 200 GeV, min bias, different nodecays, EPOS 3.117)](#20201007)
 
 
 ### EPOS_20230201 <a name="20230201"></a>
@@ -666,6 +667,46 @@ nodecays 110 20 2130 2230 -2230 1130 -1130 1230 1330 -1330 2330 -2330 3331 -3331
 
 !core full hydro x3ff   hacas off  set nfull 5    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
 core full hydro x3ff   hacas full set nfull 5    set nfreeze 5 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 5    set nfreeze 10 set modsho 100   set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+---
+
+
+
+### EPOS_20201007 <a name="20201007"></a>
+Remarks: Use this production with care, because significant fraction of jobs crashed after they hit TTL, which means that this dataset can be biased towards low-multiplicity events. It has different nodecays and impact parameter settings, when compared to similar **EPOS_20201030** production. 
+Executive summary:
+
+- Au-Au at 200 GeV
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 20
+- nodecays 110 20 -2130 2130 2230 -2230 1130 -1130 1230 -1230 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~3 M events (50 events per final ROOT file)
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20201007  
+- common name of ROOT file: merged_z-EPOS_20201007.root
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 79 set maproj 197 set latarg 79 set matarg 197  set ecms 200
+set bminim 0 set bmaxim 20
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 -2130 2130 2230 -2230 1130 -1130 1230 -1230 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 5    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 5    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
 !core off hydro x3ffoff hacas off  set nfull 5    set nfreeze 10 set modsho 100   set centrality 0                   !no hydro no casc
 
 fillTree(C2)

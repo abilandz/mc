@@ -343,7 +343,7 @@ Executive summary:
 - fillTree(C2) ('bim' variable = number of pomerons)
 - total statistics: 9.88 M events (10 K events per final ROOT file)
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20220121-2  
-- common name of ROOT file: z-EPOS_20220121-2.root
+- common name of ROOT file: merged_z-EPOS_20220121-2.root
 
 EPOS 3.117 config file:
 

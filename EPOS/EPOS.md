@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20230223
+**Last update**: 20230224
 
 ### Table of Contents
 
@@ -33,10 +33,10 @@ Executive summary:
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- total statistics: 206.6 M events (100 K events per ROOT file after final merging)
+- total statistics: 216.3 M events (100 K events per ROOT file after final merging)
 the output files for this production are in: 
-  - /scratch7/abilandz/sim/EPOS_20230201-1 => 167.5 M (GSI, cluster "Virgo", partition "main")
-  - /scratch5/abilandz/sim/EPOS_20230201-2 => 26.7 M (local, cluster "ktacluster", partition "kta")
+  - /scratch7/abilandz/sim/EPOS_20230201-1 => 175.7 M (GSI, cluster "Virgo", partition "main")
+  - /scratch5/abilandz/sim/EPOS_20230201-2 => 28.2 M (local, cluster "ktacluster", partition "kta")
   -  /scratch8/abilandz/sim/EPOS_20230201-3 => 4.6 M (LRZ, cluster "serial", partition "serial_std")
   -  /scratch8/abilandz/sim/EPOS_20230201-4 => 5.1 M (LRZ, cluster "cm2_tiny", partition "cm2_tiny")
   -  /scratch8/abilandz/sim/EPOS_20230201-5 => 0.7 M (LRZ, cluster "cm2", partition "cm2_std")

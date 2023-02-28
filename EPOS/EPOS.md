@@ -723,7 +723,7 @@ echo off
 
 
 
-### EPOS_20201027-1 <a name="20201027.1"></a>
+### EPOS_20201027 <a name="20201027.1"></a>
 Executive summary:
 - Au-Au at 39 GeV
 - EPOS 3.117

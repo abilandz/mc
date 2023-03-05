@@ -35,9 +35,9 @@ Executive summary:
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- total statistics: 295.5 M events (100 K events per ROOT file after final merging)
+- total statistics: 297.5 M events (100 K events per ROOT file after final merging)
 the output files for this production are in: 
-  - /scratch7/abilandz/sim/EPOS_20230201-1 => 238.2 M (GSI, cluster "Virgo", partition "main")
+  - /scratch7/abilandz/sim/EPOS_20230201-1 => 240.3 M (GSI, cluster "Virgo", partition "main")
   - /scratch5/abilandz/sim/EPOS_20230201-2 => 34.7 M (local, cluster "ktacluster", partition "kta")
   -  /scratch8/abilandz/sim/EPOS_20230201-3 => 8.1 M (LRZ, cluster "serial", partition "serial_std")
   -  /scratch8/abilandz/sim/EPOS_20230201-4 => 8.9 M (LRZ, cluster "cm2_tiny", partition "cm2_tiny")

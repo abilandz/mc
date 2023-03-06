@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20230305
+**Last update**: 20230306
 
 ### Table of Contents
 
@@ -25,7 +25,7 @@
 
 
 ### EPOS_20230201 <a name="20230201"></a>
-Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. 
+Remarks: This was the large-scale production, obtained using 7 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. 
 
 Executive summary:
 - pp at 13 TeV
@@ -35,15 +35,15 @@ Executive summary:
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- total statistics: 300.0 M events (100 K events per ROOT file after final merging)
+- total statistics: 304.5 M events (100 K events per ROOT file after final merging)
 the output files for this production are in: 
-  - /scratch7/abilandz/sim/EPOS_20230201-1 => 243.3 M (GSI, cluster "Virgo", partition "main")
-  - /scratch5/abilandz/sim/EPOS_20230201-2 => 34.7 M (local, cluster "ktacluster", partition "kta")
-  -  /scratch8/abilandz/sim/EPOS_20230201-3 => 8.1 M (LRZ, cluster "serial", partition "serial_std")
-  -  /scratch8/abilandz/sim/EPOS_20230201-4 => 8.9 M (LRZ, cluster "cm2_tiny", partition "cm2_tiny")
-  -  /scratch8/abilandz/sim/EPOS_20230201-5 => 1.1 M (LRZ, cluster "cm2", partition "cm2_std")
-  -  /scratch8/abilandz/sim/EPOS_20230201-6 => 3.8 M (LRZ, cluster "mpp3", partition "mpp3_batch")
-  -  /scratch8/abilandz/sim/EPOS_20230201-7 => 0.2 M (LRZ, cluster "cm2", partition "cm2_large")
+  - /scratch7/abilandz/sim/EPOS_20230201-1 => 246.1 M (GSI, cluster "Virgo", partition "main")
+  - /scratch5/abilandz/sim/EPOS_20230201-2 => 34.6 M (local, cluster "ktacluster", partition "kta")
+  -  /scratch8/abilandz/sim/EPOS_20230201-3 => 8.8 M (LRZ, cluster "serial", partition "serial_std")
+  -  /scratch8/abilandz/sim/EPOS_20230201-4 => 9.3 M (LRZ, cluster "cm2_tiny", partition "cm2_tiny")
+  -  /scratch8/abilandz/sim/EPOS_20230201-5 => 1.3 M (LRZ, cluster "cm2", partition "cm2_std")
+  -  /scratch8/abilandz/sim/EPOS_20230201-6 => 4.1 M (LRZ, cluster "mpp3", partition "mpp3_batch")
+  -  /scratch8/abilandz/sim/EPOS_20230201-7 => 0.3 M (LRZ, cluster "cm2", partition "cm2_large")
 - the common name of ROOT file: merged_z-EPOS_20230201.root
 
 EPOS 4 config file:

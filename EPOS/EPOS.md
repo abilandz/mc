@@ -4,15 +4,15 @@
 
 ### Table of Contents
 
-* [EPOS_20230201 (pp at 13 TeV, min bias, EPOS 4)](#20230201)
+* [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201)
 * [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228)
 * [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#20221117)
 * [EPOS_20220901 (Xe-Xe at 5.44 TeV, min bias, EPOS 3.117)](#20220901)
-* [EPOS_20220510 (pp at 13 TeV, high mult, EPOS 3.117)](#20220510)
+* [EPOS_20220510 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20220510)
 * [EPOS_20220121-3 (pp at 62.4 GeV, min bias, EPOS 3.117)](#20220121.3)
 * [EPOS_20220121-2 (pp at 6.7 GeV, min bias, EPOS 3.117)](#20220121.2)
 * [EPOS_20220121-1 (pp at 6.1 GeV, min bias, EPOS 3.117)](#20220121.1)
-* [EPOS_20210611-1 (pp at 13 TeV, high mult, EPOS 3.117)](#20210611.1)
+* [EPOS_20210611-1 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20210611.1)
 * [EPOS_20210125-2 (Au-Au at 200 GeV, min bias, EPOS 3.117)](#20210125.2)
 * [EPOS_20210125-1 (O-O at 6.35 TeV, min bias, hydro+cascade, EPOS 3.117)](#20210125.1)
 * [EPOS_20210118-1 (O-O at 6.35 TeV, min bias, only hydro, EPOS 3.117)](#20210118.1)
@@ -27,7 +27,11 @@
 
 
 ### EPOS_20230201 <a name="20230201"></a>
-Remarks: This was the large-scale production, obtained using 7 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. 
+Remarks: This was the large-scale production, obtained using 7 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for all batch farms, simply use:
+
+```bash
+find /scratch?/abilandz/sim/EPOS_20230201-? -type f -name "*.root" | tee list.txt
+```
 
 Executive summary:
 - pp at 13 TeV
@@ -250,7 +254,11 @@ echo off
 
 
 ### EPOS_20220510 <a name="20220510"></a>
-Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. 
+Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for all batch farms, simply use:
+
+```bash
+find /scratch?/abilandz/sim/EPOS_20220510-? -type f -name "*.root" | tee list.txt
+```
 
 Executive summary:
 - pp at 13 TeV

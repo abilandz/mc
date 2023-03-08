@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20230306
+**Last update**: 20230308
 
 ### Table of Contents
 
@@ -21,6 +21,8 @@
 * [EPOS_20201030 (Au-Au at 200 GeV, min bias, EPOS 3.117)](#20201030)
 * [EPOS_20201028 (pp at 200 GeV, min bias, EPOS 3.117)](#20201028)
 * [EPOS_20201027 (Au-Au at 39 GeV, min bias, EPOS 3.117)](#20201027)
+* [EPOS_20201014-2 (pp at 13 TeV, min bias, EPOS 3.117)](#EPOS_20201014.2) 
+* [EPOS_20201014-1 (pp at 7 TeV, min bias, EPOS 3.117)](#EPOS_20201014.1) 
 * [EPOS_20201007 (Au-Au at 200 GeV, min bias, different nodecays, EPOS 3.117)](#20201007)
 
 
@@ -732,7 +734,7 @@ Executive summary:
 - nodecays 110 20 -2130 2130 2230 -2230 1130 -1130 1230 -1230 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: TBI events (1000 events per final ROOT file)
+- total statistics: 482 K events (1000 events per final ROOT file)
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20201027
 - common name of ROOT file: merged_z-EPOS_20201027..root
 
@@ -751,6 +753,88 @@ nodecays 110 20 -2130 2130 2230 -2230 1130 -1130 1230 -1230 1330 -1330 2330 -233
 !core full hydro x3ff   hacas off  set nfull 5    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
 core full hydro x3ff   hacas full set nfull 5    set nfreeze 5 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
 !core off hydro x3ffoff hacas off  set nfull 5    set nfreeze 10 set modsho 100   set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+
+
+---
+
+
+
+### EPOS_20201014-2 <a name="EPOS_20201014-2"></a>
+Executive summary:
+
+- pp at 13 TeV
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays  110 20 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~ 3.3 M events (100 K events per final ROOT file)
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20201014-2 
+- common name of ROOT file: merged_z-EPOS_20201014-2.root
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 13000
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays  110 20 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+
+
+---
+
+
+
+### EPOS_20201014-1 <a name="EPOS_20201014-1"></a>
+Executive summary:
+
+- pp at 7 TeV
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays  110 20 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~3.5 M events (100 K events per final ROOT file)
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20201014-1
+- common name of ROOT file: merged_z-EPOS_20201014-1.root
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 7000
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays  110 20 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0                   !no hydro no casc
 
 fillTree(C2)
 

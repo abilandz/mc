@@ -21,8 +21,8 @@
 * [EPOS_20201030 (Au-Au at 200 GeV, min bias, EPOS 3.117)](#20201030)
 * [EPOS_20201028 (pp at 200 GeV, min bias, EPOS 3.117)](#20201028)
 * [EPOS_20201027 (Au-Au at 39 GeV, min bias, EPOS 3.117)](#20201027)
-* [EPOS_20201014-2 (pp at 13 TeV, min bias, EPOS 3.117)](#EPOS_20201014.2) 
-* [EPOS_20201014-1 (pp at 7 TeV, min bias, EPOS 3.117)](#EPOS_20201014.1) 
+* [EPOS_20201014-2 (pp at 13 TeV, min bias, EPOS 3.117)](#20201014.2) 
+* [EPOS_20201014-1 (pp at 7 TeV, min bias, EPOS 3.117)](#20201014.1) 
 * [EPOS_20201007 (Au-Au at 200 GeV, min bias, different nodecays, EPOS 3.117)](#20201007)
 
 
@@ -765,7 +765,7 @@ echo off
 
 
 
-### EPOS_20201014-2 <a name="EPOS_20201014-2"></a>
+### EPOS_20201014-2 <a name="20201014.2"></a>
 Executive summary:
 
 - pp at 13 TeV
@@ -806,7 +806,7 @@ echo off
 
 
 
-### EPOS_20201014-1 <a name="EPOS_20201014-1"></a>
+### EPOS_20201014-1 <a name="20201014.1"></a>
 Executive summary:
 
 - pp at 7 TeV

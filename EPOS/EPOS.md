@@ -25,7 +25,7 @@
 * [EPOS_20201014-1 (pp at 7 TeV, min bias, EPOS 3.117)](#20201014.1) 
 * [EPOS_20201007 (Au-Au at 200 GeV, min bias, different nodecays, EPOS 3.117)](#20201007)
 * [EPOS_20201006-2  (pp at 200 GeV, min bias, EPOS 3.117)](#20201006.2)
-* [EPOS_20201006-1  (pp at 17.3 GeV, min bias, EPOS 3.117)](#20201001.1)
+* [EPOS_20201006-1  (pp at 17.3 GeV, min bias, EPOS 3.117)](#20201006.1)
 
 
 

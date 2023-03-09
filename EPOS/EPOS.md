@@ -1028,7 +1028,7 @@ echo off
 
 
 ### EPOS_20201001-2 <a name="20201001.2"></a>
-Remarks: This was the initially **EPOS_20200608**, rerun with a few modifications.
+Remarks: This was initially **EPOS_20200608**, but rerun here with a few modifications.
 
 Executive summary:
 
@@ -1071,7 +1071,7 @@ echo off
 
 
 ### EPOS_20201001-1 <a name="20201001.1"></a>
-Remarks: This was the initially **EPOS_20200602**, rerun with a few modifications.
+Remarks: This was initially **EPOS_20200602**, but rerun here with a few modifications.
 
 Executive summary:
 

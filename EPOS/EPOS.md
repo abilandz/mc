@@ -5,8 +5,8 @@
 ### Table of Contents
 
 * [EPOS_20230330 (Au-Au at 62.4 GeV, min bias, EPOS 3.117)](#20230330) - **RUNNING**
-* [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201) - **RUNNING**
-* [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228)
+* [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201)
+* [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228) - **RESTARTED**
 * [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#20221117)
 * [EPOS_20220901 (Xe-Xe at 5.44 TeV, min bias, EPOS 3.117)](#20220901)
 * [EPOS_20220510 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20220510)

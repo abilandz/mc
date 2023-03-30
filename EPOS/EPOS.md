@@ -1,10 +1,11 @@
 # Local EPOS productions
 
-**Last update**: 20230313
+**Last update**: 20230330
 
 ### Table of Contents
 
-* [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201)
+* [EPOS_20230330 (Au-Au at 62.4 GeV, min bias, EPOS 3.117)](#20230330) - **RUNNING**
+* [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201) - **RUNNING**
 * [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228)
 * [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#20221117)
 * [EPOS_20220901 (Xe-Xe at 5.44 TeV, min bias, EPOS 3.117)](#20220901)
@@ -18,7 +19,7 @@
 * [EPOS_20210118-1 (O-O at 6.35 TeV, min bias, only hydro, EPOS 3.117)](#20210118.1)
 * [EPOS_20210106-1 (O-O at 7 TeV, min bias, EPOS 3.117)](#20210106.1)
 * [EPOS_20201113-1 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20201113.1)
-* [EPOS_20201030 (Au-Au at 200 GeV, min bias, EPOS 3.117)](#20201030)
+* [EPOS_20201030 (Au-Au at 200 GeV, min bias, EPOS 3.117)illTree(C1)](#20201030)
 * [EPOS_20201028 (pp at 200 GeV, min bias, EPOS 3.117)](#20201028)
 * [EPOS_20201027 (Au-Au at 39 GeV, min bias, EPOS 3.117)](#20201027)
 * [EPOS_20201014-2 (pp at 13 TeV, min bias, EPOS 3.117)](#20201014.2) 
@@ -31,6 +32,49 @@
 * [EPOS_20201001-1 (pp at 200 GeV, min bias, EPOS 3.117)](#20201001.1)
 * [EPOS_20200608 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20200608)
 * [EPOS_20200602 (pp at 200 GeV, min bias, EPOS 3.117)](#20200602)
+
+
+
+
+### EPOS_20230330 <a name="20230330"></a>
+Remarks: Same as **EPOS_20201007**, just the collision energy is 62.4 GeV, and fillTree(C1) is set.
+
+Executive summary:
+
+- Au-Au at 62.4 GeV
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 20
+- nodecays 110 20 -2130 2130 2230 -2230 1130 -1130 1230 -1230 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C1) ('bim' variable = impact parameter)
+- total statistics: ~TBI M events (1000 events per final ROOT file)
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20230330  
+- common name of ROOT file: merged_z-EPOS_20230330.root
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 79 set maproj 197 set latarg 79 set matarg 197  set ecms 62.4
+set bminim 0 set bmaxim 20
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 -2130 2130 2230 -2230 1130 -1130 1230 -1230 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 5    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 5    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 5    set nfreeze 10 set modsho 100   set centrality 0                   !no hydro no casc
+
+fillTree(C1)
+
+echo off
+```
+
+---
+
 
 
 ### EPOS_20230201 <a name="20230201"></a>

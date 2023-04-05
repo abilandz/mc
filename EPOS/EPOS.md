@@ -6,7 +6,7 @@
 
 * [EPOS_20230330 (Au-Au at 62.4 GeV, min bias, EPOS 3.117)](#20230330) - **RUNNING**
 * [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201)
-* [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228) - **RESTARTED**
+* [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228) - **RUNNING**
 * [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#20221117)
 * [EPOS_20220901 (Xe-Xe at 5.44 TeV, min bias, EPOS 3.117)](#20220901)
 * [EPOS_20220510 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20220510)
@@ -48,7 +48,7 @@ Executive summary:
 - nodecays 110 20 -2130 2130 2230 -2230 1130 -1130 1230 -1230 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- total statistics: ~2.1 M events (1000 events per final ROOT file) - **RUNNING**
+- current statistics: ~2.1 M events (1000 events per final ROOT file) - **RUNNING**
 - output files for this production are in: /scratch5/abilandz/sim/EPOS_20230330  
 - common name of ROOT file: merged_z-EPOS_20230330.root
 
@@ -156,7 +156,10 @@ fillTree4(C1) !root output
 
 ### EPOS_20221228 <a name="20221228"></a>
 
+Remarks: This production was restarted on March 27th, to increase the initial statistics of ~150 M events to reach new target statistics of ~500 M. 
+
 Executive summary:
+
 - pp at 13 TeV
 - EPOS 3.117
 - hydro (NO cascade)
@@ -164,7 +167,7 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- total statistics: ~150 M events (~1 M events per final merged ROOT file)
+- current statistics: ~150 M events (~1 M events per final merged ROOT file) - **RUNNING**
 - output files for this production are in: /scratch7/abilandz/sim/EPOS_20221228 
 - common name of ROOT file: merged_merged_z-EPOS_20221228.root
 

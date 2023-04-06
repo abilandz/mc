@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20230405
+**Last update**: 20230406
 
 ### Table of Contents
 
@@ -48,7 +48,7 @@ Executive summary:
 - nodecays 110 20 -2130 2130 2230 -2230 1130 -1130 1230 -1230 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- current statistics: ~2.1 M events (1000 events per final ROOT file) - **RUNNING**
+- current statistics: ~2.4 M events (1000 events per final ROOT file) - **RUNNING**
 - output files for this production are in: /scratch5/abilandz/sim/EPOS_20230330  
 - common name of ROOT file: merged_z-EPOS_20230330.root
 
@@ -156,7 +156,7 @@ fillTree4(C1) !root output
 
 ### EPOS_20221228 <a name="20221228"></a>
 
-Remarks: This production was restarted on March 27th, to increase the initial statistics of ~150 M events to reach new target statistics of ~500 M. 
+Remarks: This production was restarted on March 27th, to increase the initial statistics of ~150 M events to reach new target statistics of ~500 M.
 
 Executive summary:
 
@@ -167,8 +167,10 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- current statistics: ~150 M events (~1 M events per final merged ROOT file) - **RUNNING**
+- current statistics: ~156.0 M events (~1 M or ~ 100 K events per final merged ROOT file, see below) - **RUNNING**
 - output files for this production are in: /scratch7/abilandz/sim/EPOS_20221228 
+  - subdirectories 0-154 have ~1 M events per final merged ROOT file (original production)
+  - subdirectories 155-... have ~100 K events per final merged ROOT file (additional production)
 - common name of ROOT file: merged_merged_z-EPOS_20221228.root
 
 

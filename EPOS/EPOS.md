@@ -1,13 +1,13 @@
 # Local EPOS productions
 
-**Last update**: 20230423
+**Last update**: 20230511
 
 ### Table of Contents
 
-* [EPOS_20230418 (pp at 13 TeV, high mult, EPOS 3.117)](#20230418) - **RUNNING**
+* [EPOS_20230418 (pp at 13 TeV, high mult, EPOS 3.117)](#20230418) - **PAUSED**
 * [EPOS_20230330 (Au-Au at 62.4 GeV, min bias, EPOS 3.117)](#20230330)
 * [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201)
-* [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228) - **PAUSED**
+* [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228) - **RUNNING**
 * [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#20221117)
 * [EPOS_20220901 (Xe-Xe at 5.44 TeV, min bias, EPOS 3.117)](#20220901)
 * [EPOS_20220510 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20220510)
@@ -48,7 +48,7 @@ Executive summary:
 - nodecays 110 20 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- current statistics: 40.60 M events (100 K events per final ROOT file) - **RUNNING**
+- current statistics: 40.60 M events (100 K events per final ROOT file) - **PAUSED**
 - output files for this production are in: /scratch7/abilandz/sim/EPOS_20230418
 - common name of ROOT file: merged_z-EPOS_20230418.root
 
@@ -214,10 +214,10 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- current statistics: ~238.0 M events (~1 M or ~100 K events per final merged ROOT file, see below) - **PAUSED**
+- current statistics: ~238.0 M events (~1 M or ~100 K events per final merged ROOT file, see below) - **RUNNING**
 - output files for this production are in: /scratch7/abilandz/sim/EPOS_20221228 
   - subdirectories 0-154 have ~1 M events per final merged ROOT file (original production)
-  - subdirectories 155-984 have ~100 K events per final merged ROOT file (additional production) - **PAUSED**
+  - subdirectories 155-984 have ~100 K events per final merged ROOT file (additional production) - **RUNNING**
 - common name of ROOT file: merged_merged_z-EPOS_20221228.root
 
 

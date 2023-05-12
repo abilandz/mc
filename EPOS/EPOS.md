@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20230511
+**Last update**: 20230512
 
 ### Table of Contents
 
@@ -203,7 +203,7 @@ fillTree4(C1) !root output
 
 ### EPOS_20221228 <a name="20221228"></a>
 
-Remarks: This production was restarted on March 27th, to increase the initial statistics of ~150 M events to reach new target statistics of ~500 M. 
+Remarks: This production was restarted on March 27th, to increase the initial statistics of ~150 M events to reach new target statistics of ~500 M. Subdirectories >= 985 contain results after major Virgo upgrade which finished on May 11th. 
 
 Executive summary:
 
@@ -214,10 +214,10 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- current statistics: ~238.0 M events (~1 M or ~100 K events per final merged ROOT file, see below) - **RUNNING**
+- current statistics: ~246.3 M events (~1 M or ~100 K events per final merged ROOT file, see below) - **RUNNING**
 - output files for this production are in: /scratch7/abilandz/sim/EPOS_20221228 
   - subdirectories 0-154 have ~1 M events per final merged ROOT file (original production)
-  - subdirectories 155-984 have ~100 K events per final merged ROOT file (additional production) - **RUNNING**
+  - subdirectories 155-1067 have ~100 K events per final merged ROOT file (additional production) - **RUNNING**
 - common name of ROOT file: merged_merged_z-EPOS_20221228.root
 
 
@@ -687,7 +687,7 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: ~0.95 M events (1000 events per final ROOT file)
+- total statistics: ~0.78 M events (1000 events per final ROOT file)
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20210106-1
 - common name of ROOT file: merged_z-EPOS_20210106-1.root
 

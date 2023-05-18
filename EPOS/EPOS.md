@@ -33,7 +33,7 @@
 * [EPOS_20201001-1 (pp at 200 GeV, min bias, EPOS 3.117)](#20201001.1)
 * [EPOS_20200608 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20200608)
 * [EPOS_20200602 (pp at 200 GeV, min bias, EPOS 3.117)](#20200602)
-* [EPOS_20200316 (pC at 17.2 GeV, min bias, EPOS 3.117)](#20200316) - **MERGING**
+* [EPOS_20200316 (p-C at 17.2 GeV, min bias, EPOS 3.117)](#20200316) - **MERGING**
 * [EPOS_20200207-3 (pp at 12.3 GeV, min bias, EPOS 3.117)](#20200207.3) - **MERGING**
 * [EPOS_20200207-2 (pp at 8.8 GeV, min bias, EPOS 3.117)](#20200207.2) - **MERGING**
 * [EPOS_20200207-1 (pp at 7.7 GeV, min bias, EPOS 3.117)](#20200207.1) - **MERGING**

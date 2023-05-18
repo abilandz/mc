@@ -34,7 +34,7 @@
 * [EPOS_20200608 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20200608)
 * [EPOS_20200602 (pp at 200 GeV, min bias, EPOS 3.117)](#20200602)
 * [EPOS_20200316 (p-C at 17.2 GeV, min bias, EPOS 3.117)](#20200316)
-* [EPOS_20200207-3 (pp at 12.3 GeV, min bias, EPOS 3.117)](#20200207.3) - **MERGING**
+* [EPOS_20200207-3 (pp at 12.3 GeV, min bias, EPOS 3.117)](#20200207.3)
 * [EPOS_20200207-2 (pp at 8.8 GeV, min bias, EPOS 3.117)](#20200207.2) - **MERGING**
 * [EPOS_20200207-1 (pp at 7.7 GeV, min bias, EPOS 3.117)](#20200207.1) - **MERGING**
 * [EPOS_20200121 (pp at 13 TeV, min bias, EPOS 3.117)](#20200121) - **READY_TO_MERGE**
@@ -1355,7 +1355,7 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: ~7.84 M events (100 K events per final ROOT file) - **MERGING**
+- total statistics: 7.8 M events (100 K events per final ROOT file)
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200207-3
 - common name of ROOT file: merged_z-EPOS_20200207-3.root
 

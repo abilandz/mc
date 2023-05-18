@@ -38,7 +38,7 @@
 * [EPOS_20200207-2 (pp at 8.8 GeV, min bias, EPOS 3.117)](#20200207.2) - **MERGING**
 * [EPOS_20200207-1 (pp at 7.7 GeV, min bias, EPOS 3.117)](#20200207.1) 
 * [EPOS_20200121 (pp at 13 TeV, min bias, EPOS 3.117)](#20200121) - **READY_TO_MERGE**
-* [EPOS_20160901 (pp at 7 TeV, min bias, EPOS 3.117)](#20160901) - **NOT_READY**
+* [EPOS_20160901 (pp at 7 TeV, min bias, EPOS 3.117)](#20160901) - **READY_TO_MERGE**
 
 
 
@@ -364,7 +364,7 @@ echo off
 
 
 ### EPOS_20220510 <a name="20220510"></a>
-Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for all batch farms, simply use:
+Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for productions from all batch farms, simply use:
 
 ```bash
 find /scratch?/abilandz/sim/EPOS_20220510-? -type f -name "*.root" | tee list.txt
@@ -1510,5 +1510,43 @@ echo off
 
 
 ### EPOS_20160901 <a name="20160901"></a>
+Remarks: This was the large-scale production, obtained using 2 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for productions from all batch farms, simply use:
 
-**NOT_READY**
+```bash
+find /scratch?/abilandz/sim/EPOS_2016090-? -type f -name "*.root" | tee list.txt
+```
+
+Executive summary:
+- pp at 7 TeV
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays  20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is hardwired, i.e. only particles in ALICE acceptance are kept (|eta| < 1)
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~1 B events (100 K events per final merged ROOT file)  - **READY_TO_MERGE**
+- output files for this production are in:
+  - /scratch6/abilandz/sim/arxiv/EPOS_20160901-1 => ~ 153 M events
+  - /scratch7/abilandz/sim/arxiv/EPOS_20160901-2 => ~ 800 M events
+- common name of ROOT file: merged_z-EPOS_20160901.root
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1 set ecms 7000
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on 
+nodecays  20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 40    set nfreeze 50 set modsho 50   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 50    set nfreeze 20 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```

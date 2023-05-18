@@ -1313,9 +1313,9 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- total statistics: ~3.9 M events (100 K events per final ROOT file) - **MERGING**
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200316 
-- common name of ROOT file: merged_z-EPOS_20200316.root TBI
+- common name of ROOT file: merged_z-EPOS_20200316.root
 
 EPOS 3.117 config file:
 
@@ -1354,9 +1354,9 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- total statistics: ~7.84 M events (100 K events per final ROOT file) - **MERGING**
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200207-3
-- common name of ROOT file: merged_z-EPOS_20200207-3.root TBI
+- common name of ROOT file: merged_z-EPOS_20200207-3.root
 
 EPOS 3.117 config file:
 
@@ -1395,9 +1395,9 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- total statistics: ~7.84 M events (100 K events per final ROOT file) - **MERGING**
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200207-2
-- common name of ROOT file: merged_z-EPOS_20200207-2.root TBI
+- common name of ROOT file: merged_z-EPOS_20200207-2.root
 
 EPOS 3.117 config file:
 
@@ -1436,9 +1436,9 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- total statistics: ~7.96 M events (100 K events per final ROOT file) - **MERGING**
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200207-1
-- common name of ROOT file: merged_z-EPOS_20200207-1.root TBI
+- common name of ROOT file: merged_z-EPOS_20200207-1.root
 
 EPOS 3.117 config file:
 
@@ -1477,9 +1477,9 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- total statistics: ~20.0 M events (100 K events per final ROOT file) - **READY_TO_MERGE**
 - output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200121
-- common name of ROOT file: merged_z-EPOS_20200121.root TBI
+- common name of ROOT file: merged_z-EPOS_20200121.root
 
 EPOS 3.117 config file:
 

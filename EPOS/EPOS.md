@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20230517
+**Last update**: 20230518
 
 ### Table of Contents
 
@@ -14,7 +14,7 @@
 * [EPOS_20220121-3 (pp at 62.4 GeV, min bias, EPOS 3.117)](#20220121.3)
 * [EPOS_20220121-2 (pp at 6.7 GeV, min bias, EPOS 3.117)](#20220121.2)
 * [EPOS_20220121-1 (pp at 6.1 GeV, min bias, EPOS 3.117)](#20220121.1)
-* [EPOS_20210611-1 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20210611.1)
+* [EPOS_20210611-1 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20210611.1) - **READY_TO_MERGE**
 * [EPOS_20210125-2 (Au-Au at 200 GeV, min bias, EPOS 3.117)](#20210125.2)
 * [EPOS_20210125-1 (O-O at 6.35 TeV, min bias, hydro+cascade, EPOS 3.117)](#20210125.1)
 * [EPOS_20210118-1 (O-O at 6.35 TeV, min bias, only hydro, EPOS 3.117)](#20210118.1)
@@ -33,6 +33,12 @@
 * [EPOS_20201001-1 (pp at 200 GeV, min bias, EPOS 3.117)](#20201001.1)
 * [EPOS_20200608 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20200608)
 * [EPOS_20200602 (pp at 200 GeV, min bias, EPOS 3.117)](#20200602)
+* [EPOS_20200316 (pC at 17.2 GeV, min bias, EPOS 3.117)](#20200316) - **MERGING**
+* [EPOS_20200207-3 (pp at 12.3 GeV, min bias, EPOS 3.117)](#20200207.3) - **MERGING**
+* [EPOS_20200207-2 (pp at 8.8 GeV, min bias, EPOS 3.117)](#20200207.2) - **MERGING**
+* [EPOS_20200207-1 (pp at 7.7 GeV, min bias, EPOS 3.117)](#20200207.1) - **MERGING**
+* [EPOS_20200121 (pp at 13 TeV, min bias, EPOS 3.117)](#20200121) - **READY_TO_MERGE**
+
 
 
 
@@ -214,7 +220,7 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- current statistics: ~386.4 M events (~1 M or ~100 K events per final merged ROOT file, see below) - **RUNNING**
+- current statistics: ~390.6 M events (~1 M or ~100 K events per final merged ROOT file, see below) - **RUNNING**
 - output files for this production are in: /scratch7/abilandz/sim/EPOS_20221228 
   - subdirectories 0-154 have ~1 M events per final merged ROOT file (original production)
   - subdirectories 155-1067 have ~100 K events per final merged ROOT file (additional production) - **RUNNING**
@@ -1292,3 +1298,206 @@ echo off
 ```
 
  
+
+---
+
+
+
+### EPOS_20200316 <a name="20200316"></a>
+Executive summary:
+
+- p-C at 17.2 GeV (C is target and proton is projectile)
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 2.84
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200316 
+- common name of ROOT file: merged_z-EPOS_20200316.root TBI
+
+EPOS 3.117 config file:
+
+```bash
+pplication hadron  
+set laproj 1 set maproj 1 set latarg 6 set matarg 12  set ecms 17.2
+set bminim 0 set bmaxim 2.84
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+
+
+---
+
+
+
+### EPOS_20200207-3 <a name="20200207.3"></a>
+Executive summary:
+
+- pp at 12.3 GeV 
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200207-3
+- common name of ROOT file: merged_z-EPOS_20200207-3.root TBI
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 12.3
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+
+
+---
+
+
+
+### EPOS_20200207-2 <a name="20200207.2"></a>
+Executive summary:
+
+- pp at 8.8 GeV 
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200207-2
+- common name of ROOT file: merged_z-EPOS_20200207-2.root TBI
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 8.8
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+
+
+---
+
+
+
+### EPOS_20200207-1 <a name="20200207.1"></a>
+Executive summary:
+
+- pp at 7.7 GeV 
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200207-1
+- common name of ROOT file: merged_z-EPOS_20200207-1.root TBI
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 7.7
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+
+
+---
+
+
+
+### EPOS_20200121 <a name="20200121"></a>
+Executive summary:
+
+- pp at 13.0 TeV 
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: ~3.9 M events (100 K events per final ROOT file) TBI
+- output files for this production are in: /scratch6/abilandz/sim/arxiv/EPOS_20200121
+- common name of ROOT file: merged_z-EPOS_20200121.root TBI
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 13000
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```

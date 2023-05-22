@@ -224,7 +224,7 @@ Executive summary:
 - current statistics: 460164000 (~460 M) events (~1 M or ~100 K events per final merged ROOT file, see below) - **RUNNING**
 - output files for this production are in: /scratch7/abilandz/sim/EPOS_20221228 
   - subdirectories 0-154 have ~1 M events per final merged ROOT file (original production)
-  - subdirectories 155-1067 have ~100 K events per final merged ROOT file (additional production) - **RUNNING**
+  - subdirectories 155-3257 have ~100 K events per final merged ROOT file (additional production) - **RUNNING**
 - common name of ROOT file: merged_merged_z-EPOS_20221228.root
 
 

@@ -38,7 +38,7 @@
 * [EPOS_20200207-2 (pp at 8.8 GeV, min bias, EPOS 3.117)](#20200207.2)
 * [EPOS_20200207-1 (pp at 7.7 GeV, min bias, EPOS 3.117)](#20200207.1) 
 * [EPOS_20200121 (pp at 13 TeV, min bias, EPOS 3.117)](#20200121) - **READY_TO_MERGE**
-* [EPOS_20160901 (pp at 7 TeV, min bias, EPOS 3.117)](#20160901) - **READY_TO_MERGE**
+* [EPOS_20160901 (pp at 7 TeV, min bias, EPOS 3.117)](#20160901)
 
 
 

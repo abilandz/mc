@@ -20,7 +20,7 @@
 * [EPOS_20210118-1 (O-O at 6.35 TeV, min bias, only hydro, EPOS 3.117)](#20210118.1)
 * [EPOS_20210106-1 (O-O at 7 TeV, min bias, EPOS 3.117)](#20210106.1)
 * [EPOS_20201113-1 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20201113.1)
-* [EPOS_20201030 (Au-Au at 200 GeV, min bias, EPOS 3.117)illTree(C1)](#20201030)
+* [EPOS_20201030 (Au-Au at 200 GeV, min bias, EPOS 3.117)](#20201030)
 * [EPOS_20201028 (pp at 200 GeV, min bias, EPOS 3.117)](#20201028)
 * [EPOS_20201027 (Au-Au at 39 GeV, min bias, EPOS 3.117)](#20201027)
 * [EPOS_20201014-2 (pp at 13 TeV, min bias, EPOS 3.117)](#20201014.2) 
@@ -38,6 +38,8 @@
 * [EPOS_20200207-2 (pp at 8.8 GeV, min bias, EPOS 3.117)](#20200207.2)
 * [EPOS_20200207-1 (pp at 7.7 GeV, min bias, EPOS 3.117)](#20200207.1) 
 * [EPOS_20200121 (pp at 13 TeV, min bias, EPOS 3.117)](#20200121)
+* [EPOS_20190114 (pp at 13 TeV, min bias, EPOS 3.117)](#20190114) - **MERGING**
+* [EPOS_20181220 (pp at 13 TeV, min bias, EPOS 3.117)](#20181220) - **MERGING**
 * [EPOS_20160901 (pp at 7 TeV, min bias, EPOS 3.117)](#20160901)
 
 
@@ -1509,8 +1511,92 @@ echo off
 
 
 
+### EPOS_20190114 <a name="20190114"></a>
+Remark: This producton was originally tagged EPOS_LBF_pp91.
+
+Executive summary:
+- pp at 13 TeV
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is hardwired, i.e. only particles in ALICE acceptance are kept (|eta| < 1)
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: TBI M events (TBI K events per final merged ROOT file) - **MERGING**
+- output files for this production are in:  /scratch5/abilandz/sim/EPOS_20190114
+- common name of ROOT file: merged_z-EPOS_20190114.root
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 13000
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+
+
+---
+
+
+
+### EPOS_20181220 <a name="20181220"></a>
+Remark: This producton was originally tagged EPOS_LBF_pp90.
+
+Executive summary:
+- pp at 13 TeV
+- EPOS 3.117
+- hydro (NO cascade)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end 
+- ALICE acceptance is hardwired, i.e. only particles in ALICE acceptance are kept (|eta| < 1)
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: TBI M events (TBI K events per final merged ROOT file) - **MERGING**
+- output files for this production are in:  /scratch5/abilandz/sim/EPOS_20181220
+- common name of ROOT file: merged_z-EPOS_20181220.root
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 13000
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+ core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+!core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+
+
+---
+
+
+
 ### EPOS_20160901 <a name="20160901"></a>
-Remarks: This was the large-scale production, obtained using 2 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for productions from all batch farms, simply use:
+Remarks: This was the large-scale production, obtained using 2 different batch farms, originally tagged EPOS_PRODUCTION_0010 and EPOS_0010, respectively. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks (see below). To get one common list of ROOT files for productions from all batch farms, simply use:
 
 ```bash
 find /scratch?/abilandz/sim/EPOS_2016090-? -type f -name "*.root" | tee list.txt

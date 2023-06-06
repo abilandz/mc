@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20230605
+**Last update**: 20230606
 
 ### Table of Contents
 
@@ -39,7 +39,7 @@
 * [EPOS_20200207-1 (pp at 7.7 GeV, min bias, EPOS 3.117)](#20200207.1) 
 * [EPOS_20200121 (pp at 13 TeV, min bias, EPOS 3.117)](#20200121)
 * [EPOS_20190114 (pp at 13 TeV, min bias, EPOS 3.117)](#20190114) - **MERGING**
-* [EPOS_20181220 (pp at 13 TeV, min bias, EPOS 3.117)](#20181220) - **MERGING**
+* [EPOS_20181220 (pp at 13 TeV, min bias, EPOS 3.117)](#20181220)
 * [EPOS_20160901 (pp at 7 TeV, min bias, EPOS 3.117)](#20160901)
 
 
@@ -1564,7 +1564,7 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end 
 - ALICE acceptance is hardwired, i.e. only particles in ALICE acceptance are kept (|eta| < 1)
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: TBI M events (TBI K events per final merged ROOT file) - **MERGING**
+- total statistics: 66.8 M events (100 K events per final merged ROOT file)
 - output files for this production are in:  /scratch5/abilandz/sim/EPOS_20181220
 - common name of ROOT file: merged_z-EPOS_20181220.root
 

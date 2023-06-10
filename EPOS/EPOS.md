@@ -38,11 +38,12 @@
 * [EPOS_20200207-2 (pp at 8.8 GeV, min bias, EPOS 3.117)](#20200207.2)
 * [EPOS_20200207-1 (pp at 7.7 GeV, min bias, EPOS 3.117)](#20200207.1) 
 * [EPOS_20200121 (pp at 13 TeV, min bias, EPOS 3.117)](#20200121)
-* [EPOS_20190114 (pp at 13 TeV, min bias, EPOS 3.117)](#20190114) - **MERGING**
-* [EPOS_20181220 (pp at 13 TeV, min bias, EPOS 3.117)](#20181220)
+* [EPOS_20190114 (pp at 13 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20190114) - **MERGING**
+* [EPOS_20181220 (pp at 13 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20181220)
 * [EPOS_20180703 (p-Pb at 5.02 TeV, min bias, EPOS 3.117)](#20180703) - **MERGING**
-* [EPOS_20170210 (p-Pb at 5.02 TeV, min bias, EPOS 3.117)](#20170210)
-* [EPOS_20160901 (pp at 7 TeV, min bias, EPOS 3.117)](#20160901)
+* [EPOS_20170901 (Pb-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170901) - **MERGING**
+* [EPOS_20170210 (p-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170210)
+* [EPOS_20160901 (pp at 7 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20160901)
 
 
 
@@ -1625,6 +1626,47 @@ nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -333
 
 !core full hydro x3ff   hacas off  set nfull 40    set nfreeze 50 set modsho 50   set centrality 0  set ijetfluid 1  !hydro
 core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+
+
+---
+
+
+
+### EPOS_20170901 <a name="20170901"></a>
+Remarks: This production was originally tagged EPOS_LBF_AA00.
+
+Executive summary:
+- Pb-Pb at 5.02 TeV
+- EPOS 3.117
+- hydro + cascade (UrQMD turned on)
+- min bias sample
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is hardwired, i.e. only particles in ALICE acceptance are kept (|eta| < 1)
+- fillTree(C2) ('bim' variable = number of pomerons)
+- total statistics: TBI M events (100 events per final merged ROOT file) 
+- output files for this production are in: /scratch5/abilandz/sim/EPOS_20170901
+- common name of ROOT file: merged_z-EPOS_20170901.root
+
+EPOS 3.117 config file:
+
+```bash
+application hadron  
+set laproj 82 set maproj 208 set latarg 82 set matarg 208 set ecms 5020
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 40    set nfreeze 50 set modsho 50   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 1    set nfreeze 2 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
 !core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
 
 fillTree(C2)

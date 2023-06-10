@@ -1598,7 +1598,7 @@ echo off
 
 
 ### EPOS_20180703 <a name="20180703"></a>
-Remarks: This production was originally tagged EPOS_LBF_pA10. It's same as EPOS_20170210, except that here there was no cut on ALICE acceptance (i.e. cut |eta| < 1 was not applied).
+Remarks: This production was originally tagged EPOS_LBF_pA10. It's same as EPOS_20170210, except that here there was no cut on ALICE acceptance (i.e. cut |eta| < 1) was not applied.
 
 Executive summary:
 - p-Pb at 5.02 TeV
@@ -1639,7 +1639,7 @@ echo off
 
 
 ### EPOS_20170210 <a name="20170210"></a>
-Remarks: This production was originally tagged EPOS_LBF_pA00.
+Remarks: This production was originally tagged EPOS_LBF_pA00. It's same as EPOS_20180703, except that here cut on ALICE acceptance (i.e. cut |eta| < 1) was applied.
 
 Executive summary:
 - p-Pb at 5.02 TeV

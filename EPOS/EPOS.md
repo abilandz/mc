@@ -1,9 +1,10 @@
 # Local EPOS productions
 
-**Last update**: 20230612
+**Last update**: 20230721
 
 ### Table of Contents
 
+* [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4)](#20230714)
 * [EPOS_20230418 (pp at 13 TeV, high mult, EPOS 3.117)](#20230418)
 * [EPOS_20230330 (Au-Au at 62.4 GeV, min bias, EPOS 3.117)](#20230330)
 * [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201)
@@ -44,6 +45,70 @@
 * [EPOS_20170901 (Pb-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170901)
 * [EPOS_20170210 (p-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170210)
 * [EPOS_20160901 (pp at 7 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20160901)
+
+
+
+
+
+
+
+### EPOS_20230714 <a name="20230714"></a>
+
+Executive summary:
+- pp at 53 GeV
+- EPOS 4 (+ patches from Klaus for pp at 53 GeV)
+- hydro (NO cascade)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C1) ('bim' variable = impact parameter)
+- total statistics: 0 M events (100 K events per ROOT file after final merging)
+- the output files for this production are in: /scratch6/abilandz/sim/EPOS_20230714
+- the common name of ROOT file: merged_z-EPOS_20230714.root
+
+EPOS 4 config file:
+
+```bash
+!-------------------------------------------------------------
+!      proton-proton with hydro and hadronic cascade
+!-------------------------------------------------------------
+
+application hadron !hadron-hadron, hadron-nucleus, or nucleus-nucleus 
+set laproj 1       !projectile atomic number
+set maproj 1       !projectile mass number
+set latarg 1       !target atomic number
+set matarg 1       !target mass number
+set ecms 53        !sqrt(s)_pp
+
+set bminim 0 set bmaxim 1.4
+set istmax 25 set phimin 0 set phimax 0
+set iranphi 0 
+ftime on 
+
+!suppressed decays: 
+nodecays 
+ 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331
+end
+
+set ninicon 1            !number of initial conditions used for hydro evolution
+core full                !core/corona activated
+hydro hlle               !hydro activated (hlle)
+eos x3ff                 !eos activated (standard epos eos x3ff)
+!hacas full              !hadronic cascade activated   
+set nfull 10             !number of events
+set nfreeze 10           !number of freeze out events per hydro event 
+set modsho 1             !certain printout every modsho events
+set centrality 0         ! 0=min bias 
+
+!print * 2                  !printout of event to ...check file
+
+fillTree4(C1) !root output
+
+!-----put here online analysis part----
+```
+
+
+---
 
 
 
@@ -532,7 +597,6 @@ fillTree(C2)
 echo off
 ```
 
-
 ---
 
 
@@ -608,7 +672,6 @@ fillTree(C1)
 
 echo off
 ```
-
 
 ---
 

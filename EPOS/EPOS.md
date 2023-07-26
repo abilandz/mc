@@ -1,10 +1,10 @@
 # Local EPOS productions
 
-**Last update**: 20230725
+**Last update**: 20230726
 
 ### Table of Contents
 
-* [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4)](#20230714)  &mdash;  **RUNNING**
+* [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4)](#20230714) 
 * [EPOS_20230418 (pp at 13 TeV, high mult, EPOS 3.117)](#20230418)
 * [EPOS_20230330 (Au-Au at 62.4 GeV, min bias, EPOS 3.117)](#20230330)
 * [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201)
@@ -62,7 +62,7 @@ Executive summary:
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- total statistics: 8.1 M events (100 K events per ROOT file after final merging)  &mdash;   **RUNNING**
+- total statistics: ~ 11.6 M events (100 K events per ROOT file after final merging) 
 - the output files for this production are in: /scratch6/abilandz/sim/EPOS_20230714
 - the common name of ROOT file: merged_z-EPOS_20230714.root
 

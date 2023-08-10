@@ -4,7 +4,7 @@
 
 ### Table of Contents
 
-* [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4)](#20230810)
+* [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4)](#20230810) &mdash; **RUNNING** 
 * [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4)](#20230714) 
 * [EPOS_20230418 (pp at 13 TeV, high mult, EPOS 3.117)](#20230418)
 * [EPOS_20230330 (Au-Au at 62.4 GeV, min bias, EPOS 3.117)](#20230330)

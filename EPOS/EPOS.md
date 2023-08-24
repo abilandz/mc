@@ -61,7 +61,7 @@ Executive summary:
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
 - set ibreit 1 !(or 2 to get printout)
-- total statistics: 9.8 M events (100 K events per ROOT file after final merging) &mdash; **RUNNING** 
+- total statistics: 10.1 M events (100 K events per ROOT file after final merging) &mdash; **RUNNING** 
 - the output files for this production are in: /scratch6/abilandz/sim/EPOS_20230810
 - the common name of ROOT file: merged_z-EPOS_20230810.root
 

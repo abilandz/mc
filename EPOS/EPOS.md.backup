@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20230824
+**Last update**: 20230831
 
 ### Table of Contents
 
@@ -51,6 +51,11 @@
 
 
 ### EPOS_20230810 <a name="20230810"></a>
+Remarks: This was the large-scale production, obtained using 2 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for all batch farms, simply use:
+
+```bash
+find /scratch?/abilandz/sim/EPOS_20230810-? -type f -name "*.root" | tee list.txt
+```
 
 Executive summary:
 - pp at 13 TeV
@@ -61,8 +66,10 @@ Executive summary:
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
 - set ibreit 1 !(or 2 to get printout)
-- total statistics: 10.1 M events (100 K events per ROOT file after final merging) &mdash; **RUNNING** 
-- the output files for this production are in: /scratch6/abilandz/sim/EPOS_20230810
+- total statistics: 15.8 M events (100 K events per ROOT file after final merging) &mdash; **RUNNING** 
+- the output files for this production are in:
+	- /scratch4/abilandz/sim/EPOS_20230810-1 => 5.6 M (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
+	- /scratch6/abilandz/sim/EPOS_20230810-2 => 10.2 M events (local, cluster "ktacluster", partition "kta") 
 - the common name of ROOT file: merged_z-EPOS_20230810.root
 
 EPOS 4 config file:

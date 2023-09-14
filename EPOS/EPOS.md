@@ -1,10 +1,10 @@
 # Local EPOS productions
 
-**Last update**: 20230911
+**Last update**: 20230914
 
 ### Table of Contents
 
-* [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4)](#20230810) &mdash; **RUNNING** 
+* [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4)](#20230810)
 * [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4)](#20230714) 
 * [EPOS_20230418 (pp at 13 TeV, high mult, EPOS 3.117)](#20230418)
 * [EPOS_20230330 (Au-Au at 62.4 GeV, min bias, EPOS 3.117)](#20230330)
@@ -66,9 +66,9 @@ Executive summary:
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
 - set ibreit 1 !(or 2 to get printout)
-- total statistics: 82.4 M events (100 K events per ROOT file after final merging) &mdash; **RUNNING** 
+- total statistics: 84.7 M events (100 K events per ROOT file after final merging) 
 - the output files for this production are in:
-	- /scratch4/abilandz/sim/EPOS_20230810-1 => 72.2 M (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
+	- /scratch4/abilandz/sim/EPOS_20230810-1 => 74.5 M (GSI, cluster "Virgo", partition "main") 
 	- /scratch6/abilandz/sim/EPOS_20230810-2 => 10.2 M events (local, cluster "ktacluster", partition "kta") 
 - the common name of ROOT file: merged_z-EPOS_20230810.root
 

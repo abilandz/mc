@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20231011
+**Last update**: 20241024
 
 ### Table of Contents
 
@@ -285,7 +285,7 @@ Executive summary:
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
 - total statistics: 304.5 M events (100 K events per ROOT file after final merging)
-the output files for this production are in: 
+  the output files for this production are in: 
   - /scratch7/abilandz/sim/EPOS_20230201-1 => 246.1 M (GSI, cluster "Virgo", partition "main")
   - /scratch5/abilandz/sim/EPOS_20230201-2 => 34.6 M (local, cluster "ktacluster", partition "kta")
   -  /scratch8/abilandz/sim/EPOS_20230201-3 => 8.8 M (LRZ, cluster "serial", partition "serial_std")
@@ -1784,7 +1784,7 @@ Executive summary:
 - ALICE acceptance is hardwired, i.e. only particles in ALICE acceptance are kept (|eta| < 1)
 - fillTree(C2) ('bim' variable = number of pomerons)
 - total statistics: 189.8 K events (100 events per final merged ROOT file) 
-- output files for this production are in: /scratch5/abilandz/sim/EPOS_20170901
+- output files for this production are in: /scratch8/abilandz/sim/EPOS_20170901
 - common name of ROOT file: merged_z-EPOS_20170901.root
 
 EPOS 3.117 config file:

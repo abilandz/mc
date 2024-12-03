@@ -525,7 +525,7 @@ Executive summary:
   - /scratch8/abilandz/sim/EPOS_20220510-5 => 10.1 M events
   - /scratch8/abilandz/sim/EPOS_20220510-6 => 49.8 M events
   - /scratch3/abilandz/sim/EPOS_20220510-7 => 14 M events &mdash; __RUNNING__
-- common name of ROOT file: merged_merged_z-EPOS_20220510.root
+- common name of ROOT file: merged_merged_z-EPOS_20220510-?.root, where ? stands for 1, 2, ..., 7 (to resemble specific oroginal batchfarm production above)
 
 EPOS 3.117 config file:
 

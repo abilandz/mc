@@ -505,7 +505,7 @@ echo off
 Remarks: This was the large-scale production, obtained using 7 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. Production EPOS_20220510-2 was done on a local batch farm before the major upgrade at the end of 2024, and EPOS_20220510-7 after the upgrade. To get one common list of ROOT files for productions from all batch farms, simply use:
 
 ```bash
-find /scratch?/abilandz/sim/EPOS_20220510-? -type f -name "*.root" | tee list.txt
+find /scratch?/abilandz/sim/EPOS_20220510-? -type f -name "merged*.root" | tee list.txt
 ```
 
 Executive summary:

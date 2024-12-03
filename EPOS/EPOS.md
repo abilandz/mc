@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20241024
+**Last update**: 20241203
 
 ### Table of Contents
 
@@ -12,7 +12,7 @@
 * [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228) 
 * [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#20221117)
 * [EPOS_20220901 (Xe-Xe at 5.44 TeV, min bias, EPOS 3.117)](#20220901)
-* [EPOS_20220510 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20220510)
+* [EPOS_20220510 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20220510)    __RUNNING__
 * [EPOS_20220121-3 (pp at 62.4 GeV, min bias, EPOS 3.117)](#20220121.3)
 * [EPOS_20220121-2 (pp at 6.7 GeV, min bias, EPOS 3.117)](#20220121.2)
 * [EPOS_20220121-1 (pp at 6.1 GeV, min bias, EPOS 3.117)](#20220121.1)
@@ -502,7 +502,7 @@ echo off
 
 
 ### EPOS_20220510 <a name="20220510"></a>
-Remarks: This was the large-scale production, obtained using 6 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for productions from all batch farms, simply use:
+Remarks: This was the large-scale production, obtained using 7 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. Production EPOS_20220510-2 was done on a local batch farm before the major upgrade at the end of 2024, and EPOS_20220510-7 after the upgrade. To get one common list of ROOT files for productions from all batch farms, simply use:
 
 ```bash
 find /scratch?/abilandz/sim/EPOS_20220510-? -type f -name "*.root" | tee list.txt
@@ -516,7 +516,7 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: ~300 M events (~1 M events per final merged ROOT file)
+- total statistics: ~300 M events (~1 M events per final merged ROOT file)    __RUNNING__
 - output files for this production are in:
   - /scratch7/abilandz/sim/EPOS_20220510-1 => 169.0 M events
   - /scratch5/abilandz/sim/EPOS_20220510-2 => 43.4 M events 
@@ -524,6 +524,7 @@ Executive summary:
   - /scratch8/abilandz/sim/EPOS_20220510-4 => 29.5 M events
   - /scratch8/abilandz/sim/EPOS_20220510-5 => 10.1 M events
   - /scratch8/abilandz/sim/EPOS_20220510-6 => 49.8 M events
+  - /scratch3/abilandz/sim/EPOS_20220510-7 => 14 M events   __RUNNING__
 - common name of ROOT file: merged_merged_z-EPOS_20220510.root
 
 EPOS 3.117 config file:

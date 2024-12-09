@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20241208
+**Last update**: 20241209
 
 ### Table of Contents
 
@@ -516,7 +516,7 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: ~337 M events (~1 M events per final merged ROOT file) &mdash; __RUNNING__
+- total statistics: ~342 M events (~1 M events per final merged ROOT file) &mdash; __RUNNING__
 - output files for this production are in:
   - /scratch7/abilandz/sim/EPOS_20220510-1 => 169.0 M events
   - /scratch5/abilandz/sim/EPOS_20220510-2 => 43.4 M events 
@@ -524,7 +524,7 @@ Executive summary:
   - /scratch8/abilandz/sim/EPOS_20220510-4 => 29.5 M events
   - /scratch8/abilandz/sim/EPOS_20220510-5 => 10.1 M events
   - /scratch8/abilandz/sim/EPOS_20220510-6 => 49.8 M events
-  - /scratch3/abilandz/sim/EPOS_20220510-7 => 37 M events &mdash; __RUNNING__
+  - /scratch3/abilandz/sim/EPOS_20220510-7 => 42 M events &mdash; __RUNNING__
 - common name of ROOT file: merged_merged_z-EPOS_20220510-?.root, where ? stands for 1, 2, ..., 7 (to resemble the specific original batchfarm production above)
 
 EPOS 3.117 config file:

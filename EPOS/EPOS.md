@@ -62,7 +62,7 @@ Executive summary:
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
 - current statistics: 100000 (100 K) events (100 K events per final merged ROOT file)
-- output files for this production are in: /scratch3/abilandz/sim/EPOS_20250320-1
+- output files for this production are in: /scratch6/abilandz/sim/EPOS_20250320-1
 - common name of ROOT file: merged_z-EPOS_20250320.root 
 
 

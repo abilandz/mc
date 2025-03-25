@@ -61,7 +61,7 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
-- current statistics: 100000 (100K) events (100 K events per final merged ROOT file)
+- current statistics: 100000 (100 K) events (100 K events per final merged ROOT file)
 - output files for this production are in: /scratch3/abilandz/sim/EPOS_20250320-1
 - common name of ROOT file: merged_z-EPOS_20250320.root 
 

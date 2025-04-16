@@ -1,17 +1,17 @@
 # Local EPOS productions
 
-**Last update**: 20250325
+**Last update**: 20250416
 
 ### Table of Contents
 
 * [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320) 
-* [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4)](#20230810)
-* [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4)](#20230714) 
+* [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4.0.0)](#20230810)
+* [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4.0.0)](#20230714) 
 * [EPOS_20230418 (pp at 13 TeV, high mult, EPOS 3.117)](#20230418)
 * [EPOS_20230330 (Au-Au at 62.4 GeV, min bias, EPOS 3.117)](#20230330)
-* [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4)](#20230201)
+* [EPOS_20230201 (pp at 13 TeV, min bias, large-scale, EPOS 4.0.0)](#20230201)
 * [EPOS_20221228 (pp at 13 TeV, min bias, EPOS 3.117)](#20221228) 
-* [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4)](#20221117)
+* [EPOS_20221117 (pp at 13 TeV, high mult, EPOS 4.0.0)](#20221117)
 * [EPOS_20220901 (Xe-Xe at 5.44 TeV, min bias, EPOS 3.117)](#20220901)
 * [EPOS_20220510 (pp at 13 TeV, high mult, large-scale, EPOS 3.117)](#20220510)
 * [EPOS_20220121-3 (pp at 62.4 GeV, min bias, EPOS 3.117)](#20220121.3)
@@ -104,7 +104,7 @@ find /scratch?/abilandz/sim/EPOS_20230810-? -type f -name "*.root" | tee list.tx
 
 Executive summary:
 - pp at 13 TeV
-- EPOS 4 (+ patches from Klaus, for a very simple broadening formula)
+- EPOS 4.0.0 (+ patches from Klaus, for a very simple broadening formula)
 - hydro + cascade (UrQMD turned on)
 - high multiplicity sample, impact parameter is set to 0: set bminim 0 set bmaxim 0
 - nodecays 110 20 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
@@ -117,7 +117,7 @@ Executive summary:
 	- /scratch6/abilandz/sim/EPOS_20230810-2 => 10.2 M events (local, cluster "ktacluster", partition "kta") 
 - the common name of ROOT file: merged_z-EPOS_20230810.root
 
-EPOS 4 config file:
+EPOS 4.0.0 config file:
 
 ```bash
 !-------------------------------------------------------------
@@ -170,7 +170,7 @@ fillTree4(C1) !root output
 
 Executive summary:
 - pp at 53 GeV
-- EPOS 4 (+ patches from Klaus for pp at 53 GeV)
+- EPOS 4.0.0 (+ patches from Klaus for pp at 53 GeV)
 - hydro (NO cascade)
 - min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
@@ -180,7 +180,7 @@ Executive summary:
 - the output files for this production are in: /scratch6/abilandz/sim/EPOS_20230714
 - the common name of ROOT file: merged_z-EPOS_20230714.root
 
-EPOS 4 config file:
+EPOS 4.0.0 config file:
 
 ```bash
 !-------------------------------------------------------------
@@ -323,7 +323,7 @@ find /scratch?/abilandz/sim/EPOS_20230201-? -type f -name "*.root" | tee list.tx
 
 Executive summary:
 - pp at 13 TeV
-- EPOS 4
+- EPOS 4.0.0
 - hydro (NO cascade)
 - min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
@@ -340,7 +340,7 @@ Executive summary:
   -  /scratch8/abilandz/sim/EPOS_20230201-7 => 0.3 M (LRZ, cluster "cm2", partition "cm2_large")
 - the common name of ROOT file: merged_z-EPOS_20230201.root
 
-EPOS 4 config file:
+EPOS 4.0.0 config file:
 * GSI, cluster "Virgo", partition "main": nfull 100, nfreeze 10
 * local, cluster "ktacluster", partition "kta":  nfull 10, nfreeze 10
 * LRZ, cluster "serial", partition "serial_std":  nfull 100, nfreeze 10
@@ -441,11 +441,11 @@ echo off
 
 ### EPOS_20221117 <a name="20221117"></a>
 
-Remarks: This was the first EPOS 4 production, used for benchmarking of large-scale production EPOS_20220510 (obtained with EPOS 3.117).
+Remarks: This was the first EPOS 4.0.0 production, used for benchmarking of large-scale production EPOS_20220510 (obtained with EPOS 3.117).
 
 Executive summary:
 - pp at 13 TeV
-- EPOS 4
+- EPOS 4.0.0
 - hydro (NO cascade)
 - high multiplicity sample, impact parameter is set to 0: set bminim 0 set bmaxim 0
 - no decays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end

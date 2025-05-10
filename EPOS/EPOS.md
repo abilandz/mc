@@ -72,7 +72,6 @@ Executive summary:
 - the output files for this production are in:
 	- /scratch4/abilandz/sim/EPOS_20250416-1 => 63 K events (local, cluster "ktacluster", partition "kta") 
 	- /scratch6/abilandz/sim/EPOS_20250416-2 => 66 K (GSI, cluster "Virgo", partition "main") 
-- output files for this production are in: /scratch6/abilandz/sim/EPOS_20250320-1
 - common name of ROOT file: merged_z-EPOS_20250416.root 
 
 

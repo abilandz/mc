@@ -1,9 +1,10 @@
 # Local EPOS productions
 
-**Last update**: 20250416
+**Last update**: 20250510
 
 ### Table of Contents
 
+* [EPOS_20250416 (PbPb at 5.36 TeV, min bias, EPOS 4.0.3)](#20250416) 
 * [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320) 
 * [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4.0.0)](#20230810)
 * [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4.0.0)](#20230714) 
@@ -47,6 +48,75 @@
 * [EPOS_20170901 (Pb-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170901)
 * [EPOS_20170210 (p-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170210)
 * [EPOS_20160901 (pp at 7 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20160901)
+
+
+
+
+### EPOS_20250416 <a name="20250416"></a>
+Remarks: This was the first production using EPOS 4.0.3. It was obtained using 2 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for all batch farms, simply use:
+
+```bash
+find /scratch?/abilandz/sim/EPOS_20250416-? -maxdepth 2 -type f -name "*.root" | tee list.txt
+```
+
+Executive summary:
+
+- PbPb at 5.36 TeV
+- EPOS 4.0.3
+- hydro + cascade (UrQMD turned on)
+- min bias sample (set centrality 0)
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
+- ALICE acceptance is NOT hardwired
+- fillTree4(C1) ('bim' variable = impact parameter)
+- current statistics: 129000 (129 K) events (1000 events per final merged ROOT file)
+- the output files for this production are in:
+	- /scratch4/abilandz/sim/EPOS_20250416-1 => 63 K events (local, cluster "ktacluster", partition "kta") 
+	- /scratch6/abilandz/sim/EPOS_20250416-2 => 66 K (GSI, cluster "Virgo", partition "main") 
+- output files for this production are in: /scratch6/abilandz/sim/EPOS_20250320-1
+- common name of ROOT file: merged_z-EPOS_20250416.root 
+
+
+
+EPOS 4.0.3 config file:
+
+```bash
+!-------------------------------------------------------------
+!       PbPb collisions with hydro and hadronic cascade
+!-------------------------------------------------------------
+application hadron !hadron-hadron, hadron-nucleus, or nucleus-nucleus collision
+set laproj 82  !projectile atomic number
+set maproj 208 !projectile mass number
+set latarg 82  !target atomic number
+set matarg 208 !target mass number
+set ecms 5360  !sqrt(s)_pp
+
+set istmax 25
+set iranphi 1
+ftime on
+
+!suppressed decays:
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
+
+core full                !core/corona activated
+hydro hlle               !hydro activated
+eos x3ff                 !eos activated
+hacas full               !hadronic cascade activated, set to 'off' to de-activate, or 'full' to activate
+
+set ninicon 1            !number of initial conditions used for hydro evolution
+set nfull 4              !number of events
+set nfreeze 1            !number of freeze out events per hydro event
+set modsho 100           !certain printout every modsho events
+set centrality 0         ! 0=min bias
+
+fillTree4(C1)            ! writes results into a ROOT file, where C1 refers to the impact parameter as centrality variable, or C2 for number of pomerons
+
+!---put here online analysis part----
+```
+
+
+
+---
+
 
 
 

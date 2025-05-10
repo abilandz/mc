@@ -4,7 +4,7 @@
 
 ### Table of Contents
 
-* [EPOS_20250416 (PbPb at 5.36 TeV, min bias, EPOS 4.0.3)](#20250416) 
+* [EPOS_20250416 (PbPb at 5.36 TeV, min bias, EPOS 4.0.3)](#20250416) &mdash; **RUNNING** 
 * [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320) 
 * [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4.0.0)](#20230810)
 * [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4.0.0)](#20230714) 
@@ -70,8 +70,8 @@ Executive summary:
 - fillTree4(C1) ('bim' variable = impact parameter)
 - current statistics: 129000 (129 K) events (1000 events per final merged ROOT file)
 - the output files for this production are in:
-	- /scratch4/abilandz/sim/EPOS_20250416-1 => 63 K events (local, cluster "ktacluster", partition "kta") 
-	- /scratch6/abilandz/sim/EPOS_20250416-2 => 66 K (GSI, cluster "Virgo", partition "main") 
+	- /scratch4/abilandz/sim/EPOS_20250416-1 => 63 K events (local, cluster "ktacluster", partition "kta") &mdash; **RUNNING**  
+	- /scratch6/abilandz/sim/EPOS_20250416-2 => 66 K (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
 - common name of ROOT file: merged_z-EPOS_20250416.root 
 
 

@@ -71,7 +71,7 @@ Executive summary:
 - current statistics: 318000 (318 K) events (1000 events per final merged ROOT file)
 - the output files for this production are in:
 	- /scratch4/abilandz/sim/EPOS_20250416-1 => 155 K events (local, cluster "ktacluster", partition "kta") &mdash; **RUNNING**  
-	- /scratch6/abilandz/sim/EPOS_20250416-2 => 163 K (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
+	- /scratch6/abilandz/sim/EPOS_20250416-2 => 163 K events (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
 - common name of ROOT file: merged_z-EPOS_20250416.root 
 
 

@@ -64,7 +64,7 @@ Executive summary:
 
 - PbPb at 5.36 TeV
 - EPOS 4.0.3
-- hydro is switched off (by setting _core off_, _hydro off_, _eos off_ in the config file) + cascade is switched on (UrQMD turned on, by setting _hacas ful_ in the config file)
+- hydro is switched off (by setting _core off_, _hydro off_, _eos off_ in the config file) + cascade is switched on (UrQMD turned on, by setting _hacas full_ in the config file)
 - min bias sample (set centrality 0)
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
 - ALICE acceptance is NOT hardwired

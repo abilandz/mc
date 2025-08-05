@@ -1,10 +1,11 @@
 # Local EPOS productions
 
-**Last update**: 20250730
+**Last update**: 20250805
 
 ### Table of Contents
 
-* [EPOS_20250416 (PbPb at 5.36 TeV, min bias, EPOS 4.0.3)](#20250416) &mdash; 
+* [EPOS_20250801 (PbPb at 5.36 TeV, min bias, without hydro, EPOS 4.0.3)](#20250801) &mdash; **RUNNING**
+* [EPOS_20250416 (PbPb at 5.36 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20250416) 
 * [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320) 
 * [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4.0.0)](#20230810)
 * [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4.0.0)](#20230714) 
@@ -52,6 +53,74 @@
 
 
 
+### EPOS_20250801 <a name="20250801"></a>
+Remarks: This is a complementary production to **EPOS_20250416**, only the hydro stage was switched off completely (by setting _core off_, _hydro off_, _eos off_ in the config file). It was obtained using 2 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get a common list of ROOT files for all batch farms, simply use:
+
+```bash
+find /scratch?/abilandz/sim/EPOS_20250801-? -maxdepth 2 -type f -name "*.root" | tee list.txt
+```
+
+Executive summary:
+
+- PbPb at 5.36 TeV
+- EPOS 4.0.3
+- hydro is switched off (by setting _core off_, _hydro off_, _eos off_ in the config file) + cascade is switched on (UrQMD turned on, by setting _hacas ful_ in the config file)
+- min bias sample (set centrality 0)
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
+- ALICE acceptance is NOT hardwired
+- fillTree4(C1) ('bim' variable = impact parameter)
+- current statistics: 412000 (0.41 M) events (~1000 events per final merged ROOT file)
+- the output files for this production are in:
+	- /scratch4/abilandz/sim/EPOS_20250801-1 => 0.20 M events (local, cluster "ktacluster", partition "kta") &mdash; **RUNNING**
+	- /scratch6/abilandz/sim/EPOS_20250801-2 => 0.22 M events (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
+- common name of ROOT file: merged_z-EPOS_20250801.root 
+
+
+
+EPOS 4.0.3 config file:
+
+```bash
+!-------------------------------------------------------------
+!       PbPb collisions with hydro and hadronic cascade
+!-------------------------------------------------------------
+application hadron !hadron-hadron, hadron-nucleus, or nucleus-nucleus collision
+set laproj 82  !projectile atomic number
+set maproj 208 !projectile mass number
+set latarg 82  !target atomic number
+set matarg 208 !target mass number
+set ecms 5360  !sqrt(s)_pp
+
+set istmax 25
+set iranphi 1
+ftime on
+
+!suppressed decays:
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
+
+core off                 !core/corona activated
+hydro off                !hydro activated
+eos off                  !eos activated
+hacas full               !hadronic cascade activated, set to 'off' to de-activate, or 'full' to activate
+
+set ninicon 1            !number of initial conditions used for hydro evolution
+set nfull 4              !number of events
+set nfreeze 1            !number of freeze out events per hydro event
+set modsho 100           !certain printout every modsho events
+set centrality 0         ! 0=min bias
+
+fillTree4(C1)            ! writes results into a ROOT file, where C1 refers to the impact parameter as centrality variable, or C2 for number of pomerons
+
+!---put here online analysis part----
+```
+
+
+
+---
+
+
+
+
+
 ### EPOS_20250416 <a name="20250416"></a>
 Remarks: This was the first production using EPOS 4.0.3. It was obtained using 2 different batch farms. Output of each batch farm is stored in a separate output directory, and then intentionally across different 'scratch' disks. To get one common list of ROOT files for all batch farms, simply use:
 
@@ -70,8 +139,8 @@ Executive summary:
 - fillTree4(C1) ('bim' variable = impact parameter)
 - current statistics: 5045664 (5.04 M) events (~1000 events per final merged ROOT file)
 - the output files for this production are in:
-	- /scratch4/abilandz/sim/EPOS_20250416-1 => 2.65 M events (local, cluster "ktacluster", partition "kta") &mdash;
-	- /scratch6/abilandz/sim/EPOS_20250416-2 => 2.39 M events (GSI, cluster "Virgo", partition "main") &mdash; 
+	- /scratch4/abilandz/sim/EPOS_20250416-1 => 2.65 M events (local, cluster "ktacluster", partition "kta") 
+	- /scratch6/abilandz/sim/EPOS_20250416-2 => 2.39 M events (GSI, cluster "Virgo", partition "main") 
 - common name of ROOT file: merged_z-EPOS_20250416.root 
 
 

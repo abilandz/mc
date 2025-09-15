@@ -71,7 +71,7 @@ Executive summary:
 - fillTree4(C1) ('bim' variable = impact parameter)
 - current statistics: 2717000 (~2.72 M) events (~1000 events per final merged ROOT file)
 - the output files for this production are in:
-	- /scratch4/abilandz/sim/EPOS_20250801-1 => 0.66 M events (local, cluster "ktacluster", partition "kta") &mdash; **RUNNING**
+	- /scratch4/abilandz/sim/EPOS_20250801-1 => 0.66 M events (local, cluster "ktacluster", partition "kta") &mdash; **SUSPENDED**
 	- /scratch6/abilandz/sim/EPOS_20250801-2 => 2.04 M events (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
 - common name of ROOT file: merged_z-EPOS_20250801.root 
 

@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20250830
+**Last update**: 20250915
 
 ### Table of Contents
 
@@ -69,10 +69,10 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
 - ALICE acceptance is NOT hardwired
 - fillTree4(C1) ('bim' variable = impact parameter)
-- current statistics: 1978000 (~1.98 M) events (~1000 events per final merged ROOT file)
+- current statistics: 2717000 (~2.72 M) events (~1000 events per final merged ROOT file)
 - the output files for this production are in:
 	- /scratch4/abilandz/sim/EPOS_20250801-1 => 0.66 M events (local, cluster "ktacluster", partition "kta") &mdash; **RUNNING**
-	- /scratch6/abilandz/sim/EPOS_20250801-2 => 1.32 M events (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
+	- /scratch6/abilandz/sim/EPOS_20250801-2 => 2.04 M events (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
 - common name of ROOT file: merged_z-EPOS_20250801.root 
 
 

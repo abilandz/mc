@@ -69,7 +69,7 @@ Executive summary:
 - nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
 - ALICE acceptance is NOT hardwired
 - fillTree4(C1) ('bim' variable = impact parameter)
-- current statistics: 3289000 (~2.72 M) events (~1000 events per final merged ROOT file)
+- current statistics: 3289000 (~3.29 M) events (~1000 events per final merged ROOT file)
 - the output files for this production are in:
 	- /scratch4/abilandz/sim/EPOS_20250801-1 => 0.93 M events (local, cluster "ktacluster", partition "kta") &mdash; **RUNNING**
 	- /scratch6/abilandz/sim/EPOS_20250801-2 => 2.36 M events (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 

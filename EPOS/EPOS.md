@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20250930-2
+**Last update**: 20251002-1
 
 ### Table of Contents
 
@@ -24,7 +24,7 @@
 * [EPOS_20210125-1 (O-O at 6.35 TeV, min bias, hydro+cascade, EPOS 3.117)](#20210125.1)
 * [EPOS_20210118-1 (O-O at 6.35 TeV, min bias, only hydro, EPOS 3.117)](#20210118.1)
 * [EPOS_20210106-1 (O-O at 7 TeV, min bias, EPOS 3.117)](#20210106.1)
-* [EPOS_20201113-1 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20201113.1)
+* [EPOS_20201113 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20201113) &mdash; **RUNNING**
 * [EPOS_20201030 (Au-Au at 200 GeV, min bias, EPOS 3.117)](#20201030)
 * [EPOS_20201028 (pp at 200 GeV, min bias, EPOS 3.117)](#20201028)
 * [EPOS_20201027 (Au-Au at 39 GeV, min bias, EPOS 3.117)](#20201027)
@@ -71,7 +71,7 @@ Executive summary:
 - fillTree4(C1) ('bim' variable = impact parameter)
 - current statistics: 3881000 (~3.88 M) events (~1000 events per final merged ROOT file)
 - the output files for this production are in:
-	- /scratch4/abilandz/sim/EPOS_20250801-1 => 1.18 M events (local, cluster "ktacluster", partition "kta") &mdash; **RUNNING**
+	- /scratch4/abilandz/sim/EPOS_20250801-1 => 1.18 M events (local, cluster "ktacluster", partition "kta") &mdash; **ON HOLD**
 	- /scratch6/abilandz/sim/EPOS_20250801-2 => 2.70 M events (GSI, cluster "Virgo", partition "main") &mdash; **RUNNING** 
 - common name of ROOT file: merged_z-EPOS_20250801.root 
 
@@ -1047,8 +1047,15 @@ echo off
 
 
 
-### EPOS_20201113-1 <a name="20201113.1"></a>
+### EPOS_20201113 <a name="20201113"></a>
+Remarks: This production was originally done in 2020 and it was tagged EPOS_20201113-1. It was restarted in October, 2025, to gain more statistics. The restarted production is using new EPOS 3.117 build from 2025 after all major upgrades on a batch farm, and it's tagged and stored separately as EPOS_20201113-2. To get a common list of ROOT files for both productions, simply use:
+
+```bash
+find /scratch?/abilandz/sim/EPOS_20201113-? -maxdepth 2 -type f -name "*.root" | tee list.txt
+```
+
 Executive summary:
+
 - pp at 17.3 GeV
 - EPOS 3.117
 - hydro + cascade (UrQMD turned on)
@@ -1056,11 +1063,36 @@ Executive summary:
 - nodecays  110 20 2130 -2130 2230 -2230 1130 -1130 1220 -1220 1330 -1330 2330 -2330 3331 -3331 end
 - ALICE acceptance is NOT hardwired
 - fillTree(C2) ('bim' variable = number of pomerons)
-- total statistics: 1.6 M events (100 K events per final ROOT file)
-- output files for this production are in: /scratch6/abilandz/sim/EPOS_20201113-1
-- common name of ROOT file: merged_z-EPOS_20201113-1.root
+- total statistics: 1.7 M events (100 K events per final ROOT file) — **RUNNING**
+- output files for this production are in:
+  - /scratch5/abilandz/sim/EPOS_20201113-2 =>  0.1 M events (local, cluster "ktacluster", partition "kta", using new EPOS 3.117 build from 2025) — **RUNNING**
+  - /scratch6/abilandz/sim/EPOS_20201113-1 => 1.60 M events (local, cluster "ktacluster", partition "kta", using old EPOS 3.117 build from 2020)
+- common name of ROOT file: merged_z-EPOS_20201113.root
 
-EPOS 3.117 config file:
+
+EPOS 3.117 config file (for the restarted EPOS_20201113-2 production in 2025):
+
+```bash
+application hadron  
+set laproj 1 set maproj 1 set latarg 1 set matarg 1  set ecms 17.3
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+set seedj 9780395
+nodecays  110 20 2130 -2130 2230 -2230 1130 -1130 1220 -1220 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+!core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas full set nfull 1000   set nfreeze 1  set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0                   !no hydro no casc
+
+fillTree(C2)
+
+echo off
+```
+
+EPOS 3.117 config file (for the original EPOS_20201113-1 production in 2020):
 
 ```bash
 application hadron  

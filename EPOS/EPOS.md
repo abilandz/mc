@@ -1,12 +1,12 @@
 # Local EPOS productions
 
-**Last update**: 20251006-3
+**Last update**: 20251006-4
 
 ### Table of Contents
 
 * [EPOS_20250801 (PbPb at 5.36 TeV, min bias, without hydro, EPOS 4.0.3)](#20250801) &mdash; **RUNNING**
 * [EPOS_20250416 (PbPb at 5.36 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20250416) 
-* [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320) 
+* [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320) &mdash; **RUNNING**
 * [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4.0.0)](#20230810)
 * [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4.0.0)](#20230714) 
 * [EPOS_20230418 (pp at 13 TeV, high mult, EPOS 3.117)](#20230418)
@@ -24,7 +24,7 @@
 * [EPOS_20210125-1 (O-O at 6.35 TeV, min bias, hydro+cascade, EPOS 3.117)](#20210125.1)
 * [EPOS_20210118-1 (O-O at 6.35 TeV, min bias, only hydro, EPOS 3.117)](#20210118.1)
 * [EPOS_20210106-1 (O-O at 7 TeV, min bias, EPOS 3.117)](#20210106.1)
-* [EPOS_20201113 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20201113) &mdash; **RUNNING**
+* [EPOS_20201113 (pp at 17.3 GeV, min bias, EPOS 3.117)](#20201113)
 * [EPOS_20201030 (Au-Au at 200 GeV, min bias, EPOS 3.117)](#20201030)
 * [EPOS_20201028 (pp at 200 GeV, min bias, EPOS 3.117)](#20201028)
 * [EPOS_20201027 (Au-Au at 39 GeV, min bias, EPOS 3.117)](#20201027)
@@ -217,7 +217,7 @@ nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -333
 
 ! uncomment one of the following lines
 
-core full hydro x3ff   hacas off  set nfull 10    set nfreeze 10  set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+core full hydro x3ff   hacas off  set nfull 1000   set nfreeze 1  set modsho 100   set centrality 0  set ijetfluid 1  !hydro
 !core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
 !core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
 

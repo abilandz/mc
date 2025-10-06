@@ -1,6 +1,6 @@
 # Local EPOS productions
 
-**Last update**: 20251006-6
+**Last update**: 20251006-7
 
 ### Table of Contents
 

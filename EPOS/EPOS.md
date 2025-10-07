@@ -1,12 +1,12 @@
 # Local EPOS productions
 
-**Last update**: 20251007-2
+**Last update**: 20251007-3
 
 ### Table of Contents
 
 * [EPOS_20250801 (PbPb at 5.36 TeV, min bias, without hydro, EPOS 4.0.3)](#20250801) &mdash; **RUNNING**
 * [EPOS_20250416 (PbPb at 5.36 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20250416) 
-* [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320) &mdash; **RUNNING**
+* [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320)
 * [EPOS_20230810 (pp at 13 TeV, high mult, EPOS 4.0.0)](#20230810)
 * [EPOS_20230714 (pp at 53 GeV, min bias, EPOS 4.0.0)](#20230714) 
 * [EPOS_20230418 (pp at 13 TeV, high mult, EPOS 3.117)](#20230418)

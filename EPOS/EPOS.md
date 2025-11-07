@@ -1,9 +1,10 @@
 # Local EPOS productions
 
-**Last update**: 20251103-1
+**Last update**: 20251107-1
 
 ### Table of Contents
 
+* [EPOS_20250711 (dp at 433 TeV, min bias, EPOS 3.117)](#20250711) &mdash; **RUNNING**
 * [EPOS_20250801 (PbPb at 5.36 TeV, min bias, without hydro, EPOS 4.0.3)](#20250801)
 * [EPOS_20250416 (PbPb at 5.36 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20250416) 
 * [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320)
@@ -49,6 +50,54 @@
 * [EPOS_20170901 (Pb-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170901)
 * [EPOS_20170210 (p-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170210)
 * [EPOS_20160901 (pp at 7 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20160901)
+
+
+
+
+
+### EPOS_20250711 <a name="20250711"></a>
+Remarks: This is a complementary production to **EPOS_20250320**, only projectile proton is replaced with projectile deuteron, target proton wasn't changed.
+
+
+Executive summary:
+
+- dp (deuteron + proton collisions) at 433 TeV
+- EPOS 3.117
+- hydro (NO cascade)
+- min bias sample, impact parameter is set via: set bminim 0 set bmaxim 1.4
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+- ALICE acceptance is NOT hardwired
+- fillTree(C1) ('bim' variable = impact parameter)
+- current statistics: TBI (TBI M) events (100 K events per final merged ROOT file)  &mdash; **RUNNING**
+- output files for this production are in: /scratch6/abilandz/sim/EPOS_20250711
+- common name of ROOT file: merged_z-EPOS_20250711.root 
+
+
+
+EPOS 3.117 config file:
+
+```bash
+application hadron
+set laproj 1 set maproj 2 set latarg 1 set matarg 1  set ecms 433000
+set bminim 0 set bmaxim 1.4
+set istmax 25  set phimin 0  set phimax 0
+set ninicon 1 set iranphi 0 ftime on
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331  end
+
+! uncomment one of the following lines
+
+core full hydro x3ff    hacas off  set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro
+!core full hydro x3ff   hacas full set nfull 10    set nfreeze 10 set modsho 100   set centrality 0  set ijetfluid 1  !hydro+casc
+!core off hydro x3ffoff hacas off  set nfull 30000 set nfreeze 1  set modsho 1000 set centrality 0                   !no hydro no casc
+
+fillTree(C1)
+
+echo off
+```
+
+
+
+---
 
 
 

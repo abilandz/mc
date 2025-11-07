@@ -4,7 +4,7 @@
 
 ### Table of Contents
 
-* [EPOS_20250711 (dp at 433 TeV, min bias, EPOS 3.117)](#20250711) &mdash; **RUNNING**
+* [EPOS_20251107 (dp at 433 TeV, min bias, EPOS 3.117)](#20250711) &mdash; **RUNNING**
 * [EPOS_20250801 (PbPb at 5.36 TeV, min bias, without hydro, EPOS 4.0.3)](#20250801)
 * [EPOS_20250416 (PbPb at 5.36 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20250416) 
 * [EPOS_20250320 (pp at 433 TeV, min bias, EPOS 3.117)](#20250320)
@@ -55,7 +55,7 @@
 
 
 
-### EPOS_20250711 <a name="20250711"></a>
+### EPOS_20251107 <a name="20250711"></a>
 Remarks: This is a complementary production to **EPOS_20250320**, only projectile proton is replaced with projectile deuteron, target proton wasn't changed.
 
 
@@ -69,8 +69,8 @@ Executive summary:
 - ALICE acceptance is NOT hardwired
 - fillTree(C1) ('bim' variable = impact parameter)
 - current statistics: TBI (TBI M) events (100 K events per final merged ROOT file)  &mdash; **RUNNING**
-- output files for this production are in: /scratch6/abilandz/sim/EPOS_20250711
-- common name of ROOT file: merged_z-EPOS_20250711.root 
+- output files for this production are in: /scratch6/abilandz/sim/EPOS_20251107
+- common name of ROOT file: merged_z-EPOS_20251107.root 
 
 
 

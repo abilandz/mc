@@ -1,9 +1,10 @@
 # Local EPOS productions
 
-**Last update**: 20251108-1
+**Last update**: 20260504-1
 
 ### Table of Contents
 
+* [EPOS_20260504 (O-O at 5.02 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20260504) 
 * [EPOS_20251107 (dp at 433 TeV, min bias, EPOS 3.117)](#20250711) 
 * [EPOS_20250801 (PbPb at 5.36 TeV, min bias, without hydro, EPOS 4.0.3)](#20250801)
 * [EPOS_20250416 (PbPb at 5.36 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20250416) 
@@ -50,6 +51,76 @@
 * [EPOS_20170901 (Pb-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170901)
 * [EPOS_20170210 (p-Pb at 5.02 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20170210)
 * [EPOS_20160901 (pp at 7 TeV, min bias, ALICE acceptance, EPOS 3.117)](#20160901)
+
+
+
+
+
+### EPOS_20260504 <a name="20260504"></a>
+Remarks: To get list of all output ROOT files, simply use:
+
+```bash
+find /scratch4/abilandz/sim/EPOS_20260504-1 -maxdepth 2 -type f -name "*.root" | tee list.txt
+```
+
+Executive summary:
+
+- OO at 5.02 TeV
+- EPOS 4.0.3
+- hydro + cascade (UrQMD turned on)
+- min bias sample (set centrality 0)
+- nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end 
+- ALICE acceptance is NOT hardwired
+- fillTree4(C1) ('bim' variable = impact parameter)
+- current statistics: 0 (0.0 M) events (~10000 events per final merged ROOT file)
+- the output files for this production are in:
+	- /scratch4/abilandz/sim/EPOS_20260504-1 => 0.0 M events (local, cluster "ktacluster", partition "kta") 
+- common name of ROOT file: merged_z-EPOS_20260504.root 
+
+
+
+EPOS 4.0.3 config file:
+
+```bash
+!-------------------------------------------------------------
+!       OO collisions with hydro and hadronic cascade
+!-------------------------------------------------------------
+application hadron !hadron-hadron, hadron-nucleus, or nucleus-nucleus collision                                                   
+set laproj 8   !projectile atomic number
+set maproj 16  !projectile mass number
+set latarg 8   !target atomic number
+set matarg 16  !target mass number
+set ecms 5020  !sqrt(s)_pp
+
+set istmax 25 
+set iranphi 1 
+ftime on 
+
+!suppressed decays: 
+nodecays 110 20 2130 -2130 2230 -2230 1130 -1130 1330 -1330 2330 -2330 3331 -3331 end
+
+core full                !core/corona activated 
+hydro hlle               !hydro activated 
+eos x3ff                 !eos activated
+hacas full               !hadronic cascade activated, set to 'off' to de-activate, or 'full' to activate  
+
+set ninicon 1            !number of initial conditions used for hydro evolution
+set nfull 10             !number of events
+set nfreeze 10           !number of freeze out events per hydro event 
+set modsho 100           !certain printout every modsho events
+set centrality 0         ! 0=min bias 
+
+fillTree4(C1)            ! writes results into a ROOT file, where C1 refers to the impact parameter as centrality variable, or C2 for number of pomerons
+
+!---put here online analysis part----
+```
+
+
+
+
+
+
+---
 
 
 

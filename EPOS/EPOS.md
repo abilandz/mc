@@ -1,10 +1,10 @@
 # Local EPOS productions
 
-**Last update**: 20260505-4
+**Last update**: 20260511-1
 
 ### Table of Contents
 
-* [EPOS_20260504 (O-O at 5.02 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20260504) &mdash; **ON HOLD**
+* [EPOS_20260504 (O-O at 5.02 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20260504)
 * [EPOS_20251107 (dp at 433 TeV, min bias, EPOS 3.117)](#20250711) 
 * [EPOS_20250801 (PbPb at 5.36 TeV, min bias, without hydro, EPOS 4.0.3)](#20250801)
 * [EPOS_20250416 (PbPb at 5.36 TeV, min bias, hydro+cascade, EPOS 4.0.3)](#20250416) 
@@ -74,7 +74,7 @@ Executive summary:
 - fillTree4(C1) ('bim' variable = impact parameter)
 - current statistics: 1000000 (1.0 M) events (~10000 events per final merged ROOT file)
 - the output files for this production are in:
-	- /scratch4/abilandz/sim/EPOS_20260504-1 => 1.0 M events (local, cluster "ktacluster", partition "kta") &mdash; **ON HOLD**
+	- /scratch4/abilandz/sim/EPOS_20260504-1 => 1.0 M events (local, cluster "ktacluster", partition "kta")
 - common name of ROOT file: merged_z-EPOS_20260504.root 
 
 
